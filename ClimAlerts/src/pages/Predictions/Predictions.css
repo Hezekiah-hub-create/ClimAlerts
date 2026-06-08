@@ -1,0 +1,559 @@
+/* ============================
+   AI Predictions styles
+   ============================ */
+
+.predictions-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* --- Metrics Grid --- */
+.predictions-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.pred-metric-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.pred-metric-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.pred-metric-icon-wrap {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pred-metric-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+}
+
+.pred-metric-label {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.pred-metric-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.pred-metric-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  line-height: 1.2;
+}
+
+.pred-metric-trend {
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+.pred-metric-trend.positive {
+  color: #10B981;
+}
+
+.pred-metric-trend.negative {
+  color: var(--color-danger);
+}
+
+/* --- Control Bar --- */
+.predictions-controls-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.disease-pills-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.disease-pill {
+  padding: 0.45rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.disease-pill:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.disease-pill.active {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.timeframe-group {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: white;
+  border: 1px solid var(--color-border);
+  padding: 0.2rem;
+  border-radius: var(--radius-full);
+}
+
+.timeframe-tab-btn {
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.timeframe-tab-btn:hover {
+  color: var(--color-text-main);
+}
+
+.timeframe-tab-btn.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.filter-icon-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.filter-icon-btn:hover {
+  background: #F3F4F6;
+  color: var(--color-text-main);
+}
+
+/* --- Main Layout Grid --- */
+.predictions-main-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.pred-left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pred-right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- General Card Config --- */
+.pred-card-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pred-card-header h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+/* --- Forecasts Table --- */
+.pred-table-wrap {
+  overflow-x: auto;
+}
+
+.pred-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+.pred-data-table th {
+  text-align: left;
+  padding: 0.85rem 1.5rem;
+  background-color: #F9FAFB;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pred-data-table td {
+  padding: 0.85rem 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-main);
+  vertical-align: middle;
+}
+
+.pred-data-table tbody tr:hover {
+  background-color: #F9FAFB;
+}
+
+.pred-disease-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.disease-bold {
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.disease-sub {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+.pred-risk-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.pred-risk-badge.high {
+  background-color: var(--color-danger-light);
+  color: var(--color-danger);
+}
+
+.pred-risk-badge.moderate {
+  background-color: var(--color-warning-light);
+  color: var(--color-warning);
+}
+
+.pred-risk-badge.low {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.pred-progress-cell {
+  width: 150px;
+}
+
+.score-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.score-val {
+  color: var(--color-text-main);
+}
+
+.pred-progress-track {
+  height: 6px;
+  background-color: #E5E7EB;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.pred-progress-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.pred-date-cell {
+  color: var(--color-text-muted);
+}
+
+.trend-arrow {
+  font-size: 1rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.trend-arrow.up {
+  color: var(--color-danger);
+}
+
+.trend-arrow.stable {
+  color: var(--color-text-muted);
+}
+
+.pred-card-footer {
+  padding: 0.85rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.footer-action-link {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.footer-action-link:hover {
+  color: var(--color-primary-hover);
+}
+
+/* --- Trends Chart --- */
+.pred-chart-container {
+  padding: 1.25rem;
+}
+
+/* --- Explanation Card --- */
+.explanation-header {
+  align-items: flex-start;
+}
+
+.header-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.badge-danger-outline {
+  align-self: flex-start;
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.explanation-tech-details {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.pred-explanation-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.body-heading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.factors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.factor-item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.factor-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.factor-icon-wrap.rain { color: #3B82F6; background: #EFF6FF; }
+.factor-icon-wrap.humidity { color: #06B6D4; background: #ECFEFF; }
+.factor-icon-wrap.temp { color: #F97316; background: #FFF7ED; }
+.factor-icon-wrap.pattern { color: #8B5CF6; background: #F5F3FF; }
+
+.factor-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.factor-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.factor-subtitle {
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+}
+
+.ai-insight-box {
+  background-color: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.insight-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #047857;
+}
+
+.insight-title-row h5 {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.spark-gold {
+  color: #D97706;
+}
+
+.insight-text {
+  font-size: 0.75rem;
+  color: #065F46;
+  line-height: 1.4;
+}
+
+/* --- Timeline Card --- */
+.pred-timeline-body {
+  padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline-graphic-row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 5px;
+  left: 0.5rem;
+  right: 0.5rem;
+  height: 2px;
+  background-color: #10B981;
+  z-index: 1;
+}
+
+.timeline-node-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  z-index: 2;
+}
+
+.timeline-dot-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #10B981;
+  border: 2px solid white;
+  box-shadow: 0 0 0 1px #10B981;
+}
+
+.timeline-date {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.timeline-lbl {
+  font-size: 0.6rem;
+  color: var(--color-text-muted);
+}
+
+.timeline-term-ranges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.term-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+}
+
+.term-box.green { background: #ECFDF5; border-color: #A7F3D0; color: #047857; }
+.term-box.blue { background: #EFF6FF; border-color: #BFDBFE; color: #1D4ED8; }
+.term-box.purple { background: #F5F3FF; border-color: #DDD6FE; color: #6D28D9; }
+
+.term-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.term-days {
+  font-size: 0.6rem;
+  opacity: 0.85;
+}
+
+.timeline-footer-info {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+}
+
+.timeline-footer-info .info-icon {
+  color: var(--color-text-muted);
+}

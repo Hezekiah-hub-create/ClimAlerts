@@ -1,0 +1,5480 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hohoe",
+        "place": "town",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.477735,
+          7.153187
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sovie",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2870293,
+          6.9346691
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wusuta",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2576717,
+          6.831557
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "town",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2828123,
+          6.8508173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ho",
+        "place": "city",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4688932,
+          6.6126598
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "town",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5799581,
+          6.7553638
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shia",
+        "place": "town",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5657102,
+          6.7913314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sokode Gbogame",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.401127,
+          6.5676688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "town",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4074384,
+          6.7248488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tokokoe",
+        "place": "town",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5582811,
+          6.7189821
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "town",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5195333,
+          6.7127445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kpetoe",
+        "place": "town",
+        "district": "Agotime Ziope"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.69721,
+          6.547199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Daffor",
+        "place": "town",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.283595,
+          6.5856023
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Juapong",
+        "place": "town",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.135253,
+          6.2545011
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Peki New Adzek",
+        "place": "village",
+        "district": "South Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3094448,
+          6.6222658
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gbi Wegbe",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4565868,
+          7.1127052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Anyanui",
+        "place": "town",
+        "district": "Anloga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.725745,
+          5.782714
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Atiteti",
+        "place": "village",
+        "district": "Anloga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.720472,
+          5.7813069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Atorkor",
+        "place": "village",
+        "district": "Anloga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.827653,
+          5.7784117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Srogbe",
+        "place": "village",
+        "district": "Anloga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8337611,
+          5.7792065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Anloga",
+        "place": "town",
+        "district": "Anloga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8984702,
+          5.7936484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dzita",
+        "place": "village",
+        "district": "Anloga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7691525,
+          5.7729212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Whuti",
+        "place": "village",
+        "district": "Anloga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8406059,
+          5.7813393
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Akplorwotorkor",
+        "place": "village",
+        "district": "Anloga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8005474,
+          5.7723887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agavedzi",
+        "place": "village",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0433772,
+          6.0053632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Honukope",
+        "place": "village",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.095876,
+          6.0592488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adina",
+        "place": "village",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0827457,
+          6.0504129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amutinu",
+        "place": "village",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0603541,
+          6.0245425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Woe",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9558367,
+          5.8336832
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dendo",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6048304,
+          6.0600193
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Feyito",
+        "place": "town",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5323878,
+          5.9659388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "town",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5986667,
+          6.0173099
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Matse",
+        "place": "town",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4839804,
+          6.6950609
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sogakope",
+        "place": "town",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5951312,
+          5.9989117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tefle",
+        "place": "town",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5620622,
+          6.0036374
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Aviefe",
+        "place": "town",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4752594,
+          6.6673678
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kpotame",
+        "place": "town",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.526347,
+          5.9830258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vume",
+        "place": "town",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5539539,
+          6.0078809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tegbi",
+        "place": "town",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9733691,
+          5.8536655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Akatsi",
+        "place": "town",
+        "district": "Akatsi South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.798211,
+          6.131023
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dzodze",
+        "place": "town",
+        "district": "Ketu North"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.994012,
+          6.233809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Anfoega",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.276692,
+          6.887494
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Betekpo",
+        "place": "village",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1617682,
+          6.1717823
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tagaje",
+        "place": "village",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2121198,
+          6.1682875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tsate",
+        "place": "village",
+        "district": "South Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.26843,
+          6.6239495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vakpo",
+        "place": "town",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.284712,
+          6.856428
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gbetuinu",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8331458,
+          5.9799696
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tsiame",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8576896,
+          5.9992792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Weme",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8885074,
+          5.8453175
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alakple",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8884906,
+          5.8665738
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Avenorpeme",
+        "place": "village",
+        "district": "Akatsi South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8246264,
+          6.0108691
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8708824,
+          6.0270106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Abutia",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.446727,
+          6.5418962
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Atsiati",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5123005,
+          6.6562212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Maste",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.508367,
+          6.6606499
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sokode Etoe",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4133276,
+          6.5740764
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4386521,
+          6.6170348
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kiefe",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4474337,
+          6.6200142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5160516,
+          6.6326721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4117316,
+          6.6413786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Akoefe Torkor",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4933393,
+          6.6475663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.520629,
+          6.6918867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tanyigbe",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5262272,
+          6.6986217
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Kumase",
+        "place": "town",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5709376,
+          6.2713926
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adaklu Waya",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6286474,
+          6.4470511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "town",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6255867,
+          5.8574417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6760393,
+          5.9030939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Sasekpe",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6170355,
+          6.2732671
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Amegakofe",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6172842,
+          6.2912761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6125053,
+          6.3037554
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ablornu",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6375725,
+          6.3497457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adaklu Sofa",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.644901,
+          6.3859625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6426711,
+          6.40614
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6657258,
+          6.4109902
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6571991,
+          6.4190264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zoukpé",
+        "place": "village",
+        "district": "Agotime Ziope"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6794024,
+          6.6006638
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kpando",
+        "place": "town",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2937002,
+          6.9971645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Liati Wote",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5469323,
+          7.0200826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gbledi Gborgame",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5599339,
+          7.0341573
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5403549,
+          7.1577676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Likpe Bakua",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5904378,
+          7.1625984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Likpe Todome",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6027463,
+          7.1731407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Likpe Mate",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6068243,
+          7.1830779
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lelope Agbozome",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5625805,
+          7.1972325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Likpe Bala",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6095317,
+          7.2035134
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lolobi - Ashiambi",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.518739,
+          7.1996193
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agbozume",
+        "place": "town",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.034498,
+          6.078487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fuveme Agorkedzi",
+        "place": "village",
+        "district": "Anloga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7233954,
+          5.7749123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8294818,
+          5.9728269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Avedo",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6399379,
+          6.1238377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ehi",
+        "place": "village",
+        "district": "Ketu North"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0021954,
+          6.1472606
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fenyi Yokoe",
+        "place": "town",
+        "district": "Ketu North"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0393932,
+          6.2224058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3581247,
+          5.9789786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.356708,
+          5.9863504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5691757,
+          6.0005221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Ketu North"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0019612,
+          6.168718
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Ketu North"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9951332,
+          6.1714018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Ketu North"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0077888,
+          6.1718754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Ketu North"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9901345,
+          6.212338
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Ketu North"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0001383,
+          6.2125432
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adaklu Anfoe",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6409075,
+          6.4643305
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Agotime Ziope"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6676523,
+          6.5433925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Akuete",
+        "place": "village",
+        "district": "Agotime Ziope"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6283817,
+          6.5567372
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Takla",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5351714,
+          6.6262435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5406868,
+          6.6339629
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6139067,
+          6.6541129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5972147,
+          6.6594818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hodzoka",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5785883,
+          6.6713277
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adaklu",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5867124,
+          6.5763679
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kudzra",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3482384,
+          6.9550127
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Torkor",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2585292,
+          7.0026338
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dzonti",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3160184,
+          7.011694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Akpafu Adokor",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.534923,
+          7.2838435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agbenohoe",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3062134,
+          7.0651663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Akpafu Odomi",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4734816,
+          7.2740379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Akpafu Todzi",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4908032,
+          7.2540624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dafor",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3084913,
+          7.0841699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gbefi",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3821054,
+          7.0029258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hoeme",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3809392,
+          7.0039485
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kledjo",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4605628,
+          7.1212224
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alavanyo Kpeme",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.35007,
+          7.116192
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Akpafu Mempeasem",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4789346,
+          7.2439533
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dzigbe",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2790351,
+          7.0182599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alavanyo Dzoegbedze",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3513699,
+          7.0783257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alavanyo Deme",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3543409,
+          7.0880921
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3241666,
+          7.0892898
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2990802,
+          7.0892149
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2959278,
+          7.0937384
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alavanyo Agorme",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3519269,
+          7.1015435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4518375,
+          7.1038034
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gbi-Akplamafu",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.408629,
+          7.113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alavanyo Agoxe",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3736524,
+          7.1215356
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alavanyo Abehenase",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3854436,
+          7.1234703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lolobi - Kumasi",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5270107,
+          7.2111826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lolobi - Huyeasem",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.544713,
+          7.2011894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Likpe Koforidua",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5616361,
+          7.227078
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Likpe Abrani",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5598924,
+          7.2486649
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Likpe Kukurantumi",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5686481,
+          7.2621845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Akpafu Sokpo",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5182644,
+          7.2754636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Santrokofi Benua",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.475114,
+          7.2099517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Santrokofi Bume",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4727556,
+          7.216173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Santrokofi Gbodome",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4750752,
+          7.226041
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wli Afegame",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5881242,
+          7.1194752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alavanyo Wudidi",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3642752,
+          7.1175741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Have",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3603165,
+          6.757166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nyagbo Sroe",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3798756,
+          6.7769943
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agboglakope",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5444242,
+          6.0869497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sokpoe",
+        "place": "town",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.580638,
+          5.992733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Aflao",
+        "place": "town",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1914021,
+          6.1160471
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Denu",
+        "place": "town",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.147734,
+          6.101257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adafienu",
+        "place": "town",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1369958,
+          6.0911635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Keta",
+        "place": "town",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9910728,
+          5.9215688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Abutiakope",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9886934,
+          5.90481
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dzelukope",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.985888,
+          5.893512
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hlevi",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6396218,
+          6.0131056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Awudome Kwanta",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3062761,
+          6.5850449
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kpando Fesi",
+        "place": "town",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2989933,
+          7.0367023
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nogokpo",
+        "place": "village",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0719675,
+          6.0920653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tokor",
+        "place": "town",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.131783,
+          6.115931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Afife",
+        "place": "village",
+        "district": "Ketu North"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9094244,
+          6.0644329
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Atikpui",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6245323,
+          6.7453511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ativuta",
+        "place": "village",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.065342,
+          6.0885291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Akame",
+        "place": "village",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1015014,
+          6.1036102
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gbedzekope",
+        "place": "village",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0886409,
+          6.0972727
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tsavanya",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7412216,
+          6.0745758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hikpo",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7311759,
+          6.058706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agbagorme",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7173209,
+          6.0441672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lakpo",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6879082,
+          6.0260619
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Klave",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5520427,
+          6.8128446
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4958891,
+          6.7412586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5155181,
+          6.7600522
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5429755,
+          6.7665851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dodome Awuiasu",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5177978,
+          6.7720124
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Goviefe Agordome",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3354489,
+          6.7103092
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Woadze",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3434755,
+          6.7259535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agate",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3480789,
+          6.7375118
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Awudome Avenui",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3145333,
+          6.6011783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kpeve",
+        "place": "town",
+        "district": "South Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3326709,
+          6.6851678
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Old Adzokoe",
+        "place": "village",
+        "district": "South Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3113025,
+          6.6297042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Todome",
+        "place": "town",
+        "district": "South Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2980856,
+          6.6420913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kpebe",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2302548,
+          6.8299509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gborxome",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2566308,
+          6.8183624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Awate",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2142855,
+          6.8726873
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Botoku",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2688349,
+          6.7651418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adoklu Kpetsu",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5135287,
+          6.426572
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adaklu Helekpe",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4893861,
+          6.4891586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adaklu Goefe",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4983179,
+          6.5150354
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Asiepke",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5490868,
+          6.2611325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5510636,
+          6.2485078
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Kpedzeglo",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5511977,
+          6.2339231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Alavanyo",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5526585,
+          6.2075574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mawoekpor",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5500149,
+          6.20067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Wute",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.544291,
+          6.1851133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Dadoboe",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5278705,
+          6.1405099
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Akyemfo",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5140089,
+          6.1038239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adidome",
+        "place": "town",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5031509,
+          6.0730516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Yorkutikpo",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6040556,
+          6.0737465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.604871,
+          6.0503178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Aveme Beme",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2628232,
+          6.9110864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Akpokploe",
+        "place": "village",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1696832,
+          6.1654894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Avevi",
+        "place": "village",
+        "district": "Akatsi North"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.818745,
+          6.2642967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tordzinu",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7421073,
+          6.0856982
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gaakukorpe",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6269838,
+          6.36613
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fume",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4216218,
+          6.8746837
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kopeyia",
+        "place": "village",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1127627,
+          6.1407415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Akatsi North"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.837568,
+          6.3914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dzemeni",
+        "place": "village",
+        "district": "South Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1640602,
+          6.6003126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Logba Tota",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4542028,
+          6.8892565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Létsukopé",
+        "place": "village",
+        "district": "Agotime Ziope"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7157841,
+          6.5268869
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sokode Lokoe",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4455862,
+          6.5968361
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Battor",
+        "place": "town",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4041658,
+          6.06917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Srekpe",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6586887,
+          6.2577888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Aveyime",
+        "place": "village",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3761552,
+          6.0302175
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mepe",
+        "place": "village",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.427456,
+          6.0785368
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Volo",
+        "place": "village",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3041832,
+          6.0626993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tsito Awudome",
+        "place": "town",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2789819,
+          6.5298904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Awudome Tsito",
+        "place": "town",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2887827,
+          6.5426361
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Anyirawase Awudome",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3052676,
+          6.5714091
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dzake Peki",
+        "place": "village",
+        "district": "South Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2056718,
+          6.5018692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Peki",
+        "place": "town",
+        "district": "South Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2274513,
+          6.5231138
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Torve",
+        "place": "town",
+        "district": "Akatsi South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7601729,
+          6.0970112
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Atidzive",
+        "place": "village",
+        "district": "Akatsi South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8504266,
+          6.1191745
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vodza",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0002681,
+          5.9433848
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Akanu",
+        "place": "village",
+        "district": "Ketu North"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0213691,
+          6.2526134
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lolito",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6756096,
+          5.9490349
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nyinuto",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.693537,
+          5.9369604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agbatsivi",
+        "place": "village",
+        "district": "Anloga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7469789,
+          5.870538
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agortoe",
+        "place": "village",
+        "district": "Anloga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7628053,
+          5.8613952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salo",
+        "place": "village",
+        "district": "Anloga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7924589,
+          5.8257396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seva",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9424961,
+          5.9834028
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Anyako",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9155184,
+          5.9943558
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ave Xevi",
+        "place": "village",
+        "district": "Akatsi North"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9074312,
+          6.2987726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Blameazado",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7691352,
+          5.930305
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Abor",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.86207,
+          6.0625442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Havene",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8603631,
+          6.0343228
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agornu",
+        "place": "village",
+        "district": "Akatsi South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.81247,
+          6.1686019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amedzofe",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.435497,
+          6.8473866
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Logba Alakpeti",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4294861,
+          6.8945449
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ve Hoeme",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4570161,
+          6.9543338
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ve Golokuati",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.438855,
+          6.9978331
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dzolo-Kpuita",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4403069,
+          6.7875656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dzolo-Gbogame",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.479752,
+          6.7729844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Saviefe Agorkpo",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4110945,
+          6.7826731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Anfoeta Gbogame",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3872595,
+          6.7329105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nyagbo Gagbefe",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3738578,
+          6.8159902
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Liate Dafonu",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5129049,
+          7.0280238
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Liate Soba",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5142994,
+          7.010943
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Liati Agbonyra",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4919305,
+          6.9837018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Leklebi Kame",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5155328,
+          6.9691008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gbledi Kyebi",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5684613,
+          7.0577756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fodome Ahor",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5618759,
+          7.0863609
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fodome Amele",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5487406,
+          7.0842239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fodome Helu",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5092983,
+          7.0707356
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Viepe-Kpotame",
+        "place": "village",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.158607,
+          6.1161822
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kpedze",
+        "place": "town",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4962248,
+          6.8417102
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Akome-Gbota",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4737532,
+          6.8242506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Akome-Gbogame",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4649663,
+          6.8144179
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Honuta",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5194171,
+          6.8483295
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ziave Lume",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4424304,
+          6.6507861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kpoeta",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5420786,
+          6.9109481
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lukudo",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5270233,
+          6.8772183
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nyagbo Odumase",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3719366,
+          6.7975565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Konda",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3900551,
+          6.8106837
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agbesia",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4886437,
+          6.9313838
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ave Dakpa",
+        "place": "village",
+        "district": "Akatsi North"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8576417,
+          6.3623874
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Avetikope",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.242703,
+          7.0399928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tsyome Sabadu",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.25017,
+          6.9071108
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Aveme Danyigba",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2652116,
+          6.9359041
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kpando Gadza",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3212195,
+          7.016266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kpando Agudzi",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3185971,
+          7.0243959
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wadamaxe",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2934133,
+          6.8913114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tsrukpe Tota",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2771136,
+          6.8096793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tsrukpe",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2763615,
+          6.7996672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Anfoega Bume-Wuve",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2638343,
+          6.87089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Awate",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2419922,
+          6.8670747
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fodome Woe",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5170528,
+          7.0716033
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tsorxor",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2588472,
+          6.703799
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ve Deme",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4705467,
+          6.9561205
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fodome Tormegbe",
+        "place": "village",
+        "district": "Hohoe Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5124546,
+          7.0618469
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adaklu Tsrefe",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4959337,
+          6.5089031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adaklu Ahunda Boso",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5451214,
+          6.2917453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adaklu Tokor",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5096716,
+          6.4896091
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adaklu Hasu",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4893367,
+          6.4884761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adaklu Agblefe",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4882434,
+          6.5047847
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adaklu Hehepkoe",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5258877,
+          6.393518
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adaklu Abuadi",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5136878,
+          6.497082
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Yingor",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5139305,
+          6.219479
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tosukpoe",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5305833,
+          6.2664335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Fiekpe",
+        "place": "village",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4711539,
+          6.2568213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Gidikpoe No. 1",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6454365,
+          6.304436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi America",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5207638,
+          6.2212692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Ajasikan",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.50668,
+          6.2494229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Seva",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5031936,
+          6.2013191
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6170278,
+          6.2882947
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Tsati",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5841624,
+          6.2553495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Gidikpoe No.2",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6488975,
+          6.3109446
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Adalekpoe",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5894356,
+          6.2390192
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Kutime",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6066305,
+          6.2876314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Agoe",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5207092,
+          6.2647831
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Mediage",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5785949,
+          6.2755737
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dededo",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.211578,
+          6.4416429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wegbe Kpalime",
+        "place": "village",
+        "district": "South Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3408122,
+          6.6504984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Torganu",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4810542,
+          7.0336495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Peki-Sanga",
+        "place": "village",
+        "district": "South Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1905119,
+          6.4322131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fodzoku",
+        "place": "village",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1242399,
+          6.165857
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ve-Koloenu",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4277158,
+          7.0439301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kpale Xorse",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3576136,
+          6.6895641
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Etordome",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3638631,
+          6.7037947
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vume Kpoviadzi",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7061317,
+          6.2016565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New Bakpa",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5394874,
+          6.0487105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bakpa Avedo",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6401335,
+          6.1233535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Todze",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5240602,
+          6.0557274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Unnamed place",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4966626,
+          6.1176527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Tove",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6097177,
+          6.1113694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Atsieve",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6045478,
+          6.0576957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Adakpo",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6703591,
+          6.1722657
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Tsawla",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5131051,
+          6.1361731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Anfoe",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5433503,
+          6.1460931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dekpoe",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.49438,
+          6.1263529
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Avedo",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6375764,
+          6.1344746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Liati Teikrom",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4785007,
+          7.0273511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Abortia Dorfor",
+        "place": "village",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1214209,
+          6.2244596
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Leklebi Dugah",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4943204,
+          6.9552037
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Goviefe Todzi",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.342958,
+          6.690619
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tafi Abuife",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3543434,
+          6.8616097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sasekope",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6046441,
+          6.0465323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adaklu Ahunda (Hpodzi)",
+        "place": "village",
+        "district": "Adaklu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5469561,
+          6.2994147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Leklebi Fiape",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4895353,
+          6.950177
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Yordan-Nu",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.324204,
+          6.8321176
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tafi Atome",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3855675,
+          6.9060273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gborxome",
+        "place": "village",
+        "district": "North Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2653845,
+          6.8970531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fiaxor",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9028126,
+          5.8481479
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amedzorkope",
+        "place": "village",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0394636,
+          6.1091506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dzrakate",
+        "place": "village",
+        "district": "Akatsi South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8345567,
+          6.096015
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lavoekope",
+        "place": "village",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.041892,
+          6.1313293
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gblornu",
+        "place": "town",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1739534,
+          6.1017828
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Blonya",
+        "place": "town",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1808569,
+          6.1005177
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tademe",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5433697,
+          6.0082569
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Abutia",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.3721511,
+          6.5103224
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kpota",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9062487,
+          6.0077361
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Atiavi",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8526689,
+          5.9479173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dabala",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6754982,
+          5.9810073
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Weta",
+        "place": "village",
+        "district": "Ketu North"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9797895,
+          6.1376426
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ziope",
+        "place": "village",
+        "district": "Agotime Ziope"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7437497,
+          6.4168872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tsatee",
+        "place": "village",
+        "district": "South Dayi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.244073,
+          6.6053921
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tsikudokope",
+        "place": "village",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1863062,
+          6.2235254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hoe",
+        "place": "village",
+        "district": "Ho Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5242839,
+          6.788796
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hadota",
+        "place": "village",
+        "district": "Anloga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7735537,
+          5.8773338
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adakordzi",
+        "place": "village",
+        "district": "Anloga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8162606,
+          5.7748481
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Xenui",
+        "place": "village",
+        "district": "Anloga"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8537599,
+          5.8099556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dodome Avexa",
+        "place": "village",
+        "district": "Ho West"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4977309,
+          6.8003491
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ave-Dzalele",
+        "place": "village",
+        "district": "Agotime Ziope"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7559105,
+          6.4147076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Torgorme",
+        "place": "village",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1370153,
+          6.1160301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Awuadiokome",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5343554,
+          6.0291516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agbakope",
+        "place": "village",
+        "district": "South Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.7061164,
+          6.0310559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Azagunorkope",
+        "place": "village",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.1369944,
+          6.157479
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Aborlove Nolopi",
+        "place": "village",
+        "district": "Keta Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9237903,
+          6.0349516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gaklikopfe",
+        "place": "village",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1964208,
+          6.144835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sovie Avenu",
+        "place": "village",
+        "district": "Kpando Municipal"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2879962,
+          6.9494018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Agorweme",
+        "place": "town",
+        "district": "Akatsi South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.8531086,
+          6.0794771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dove",
+        "place": "village",
+        "district": "Central Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4737684,
+          6.0297158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafi Dokpo",
+        "place": "village",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4633892,
+          6.0503713
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hatsukope",
+        "place": "village",
+        "district": "Ketu South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1272868,
+          6.1242523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Madovunu",
+        "place": "village",
+        "district": "North Tongu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.4232043,
+          5.9729297
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kpeve Tornu",
+        "place": "village",
+        "district": "Afadzato South"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.2967569,
+          6.6854376
+        ]
+      }
+    }
+  ]
+}

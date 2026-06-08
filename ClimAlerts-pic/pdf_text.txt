@@ -1,0 +1,539 @@
+ClimAlerts UI Components & Feature Explanations
+Introduction
+This document explains the purpose, meaning, and relevance of the UI components designed for the
+ClimAlerts system.
+ClimAlerts is an intelligent climate-health monitoring platform focused on predicting disease outbreaks in
+the Volta Region using environmental and health data.
+The UI components are designed to simulate a real-world public health monitoring system used by health
+authorities, analysts, and administrators.
+1. Dashboard UI
+Purpose
+The Dashboard acts as the main control center of the system.
+It gives administrators and health officials a quick overview of:
+current outbreak risks
+environmental conditions
+active alerts
+AI recommendations
+system activity
+Dashboard Components
+Overview Statistics Cards
+These cards summarize important health and climate information.
+Examples:
+Current temperature
+Humidity level
+Health risk level
+Active predictions
+Alerts sent today
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+1Relevance
+Allows users to instantly understand the current system condition without opening multiple pages.
+Live Outbreak Activity
+Shows recent disease predictions and outbreak activity.
+Examples:
+Malaria risk in Ho Municipal
+Cholera warning in Keta South
+Relevance
+Helps authorities monitor outbreaks in real time.
+AI Recommendations
+Displays AI-generated advice based on predictions.
+Example:
+"High malaria outbreak risk detected in Ho Municipal. Recommended mosquito net distribution and
+drainage cleanup."
+Relevance
+Transforms the system from a simple monitoring tool into an intelligent decision-support platform.
+Quick Actions
+Provides shortcuts for important operations.
+Examples:
+Trigger alert
+Upload dataset
+Retrain AI model
+Relevance
+Improves speed and efficiency during emergencies.
+• 
+• 
+• 
+• 
+• 
+2Recent Alerts
+Displays recently sent SMS alerts.
+Relevance
+Allows administrators to confirm whether warning messages were delivered.
+2. Predictions UI
+Purpose
+The Predictions page is the AI prediction engine interface.
+It explains:
+what disease is predicted
+confidence level
+why the prediction happened
+prediction trends over time
+Predictions Components
+Disease Forecasts
+Shows predicted diseases.
+Examples:
+Malaria risk
+Cholera outbreak risk
+Dengue fever risk
+Relevance
+Allows health officials to prepare before outbreaks become severe.
+Confidence Score
+Represents how confident the AI model is about the prediction.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+3Example:
+87% confidence
+Relevance
+Helps users judge the reliability of predictions.
+Higher confidence means stronger evidence from environmental and historical data.
+Prediction Explanation
+Explains why the prediction was made.
+Example factors:
+rainfall increase
+humidity rise
+previous outbreak similarity
+Relevance
+Improves transparency and trust in the AI system.
+This is called Explainable AI.
+Prediction Trends
+Displays how outbreak risk changes over time.
+Usually shown using line graphs.
+Relevance
+Helps identify whether risk is increasing or decreasing.
+Forecasting Timeline
+Predicts outbreak conditions over future periods.
+Examples:
+next 7 days
+• 
+• 
+• 
+• 
+• 
+4next 14 days
+next 30 days
+Relevance
+Supports long-term planning and preparation.
+3. Risk Map UI
+Purpose
+The Risk Map visually displays outbreak risk levels across districts in the Volta Region.
+Risk Map Components
+District Heatmap
+Uses colors to represent outbreak severity.
+Color Meaning:
+Green = Low Risk
+Yellow = Moderate Risk
+Orange = High Risk
+Red = Critical Risk
+Relevance
+Allows officials to quickly identify dangerous districts.
+Volta Lake Overlay
+Displays the Volta Lake on the map.
+Relevance
+Important because nearby water bodies influence mosquito breeding and disease spread.
+District Details Panel
+Shows detailed information for the selected district.
+• 
+• 
+• 
+• 
+• 
+• 
+5Examples:
+predicted cases
+rainfall
+humidity
+confidence score
+population at risk
+Relevance
+Provides localized outbreak intelligence.
+Weather Overlays
+Adds environmental data layers to the map.
+Examples:
+rainfall intensity
+humidity zones
+temperature areas
+Relevance
+Shows environmental conditions contributing to outbreaks.
+Outbreak Replay
+A timeline playback system showing how outbreak risk changed over time.
+Example:
+replaying risk progression from May 1 to May 30
+Relevance
+Helps analysts study outbreak evolution and patterns.
+Useful for research and historical analysis.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+64. Alerts & Messages UI
+Purpose
+Manages communication and emergency alert distribution.
+Alerts Components
+SMS Alert Composer
+Used to create and send warning messages.
+Relevance
+Allows rapid communication with health officers and communities.
+Recipient Groups
+Different categories of recipients.
+Examples:
+Health officers
+District coordinators
+Farmers
+General public
+Relevance
+Ensures alerts are delivered to the correct audience.
+Delivery Status
+Tracks SMS delivery progress.
+Statuses:
+Sent
+Delivered
+Failed
+Pending
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+7Relevance
+Confirms whether emergency messages reached recipients.
+Emergency Alert Templates
+Predefined outbreak messages.
+Relevance
+Speeds up emergency communication.
+Scheduled Alerts
+Allows alerts to be sent automatically at specific times.
+Relevance
+Useful for recurring advisories and outbreak monitoring.
+AI-Generated Alert Recommendation
+Automatically generates outbreak advice.
+Example:
+"High malaria outbreak risk detected in Ho Municipal. Recommended immediate environmental sanitation."
+Relevance
+Adds intelligent automation to the alert system.
+5. Data Source UI
+Purpose
+Handles data collection, synchronization, uploads, and API connections.
+8Data Source Components
+CSV/Excel Upload
+Allows manual upload of datasets.
+Examples:
+weather records
+hospital case reports
+environmental data
+Relevance
+Supports data collection from offline or external sources.
+API Integration
+Connects the system to external services.
+Examples:
+Ghana Meteorological Agency
+Ghana Health Service
+OpenWeather API
+Relevance
+Provides real-time data automatically.
+API Sync
+Automatically updates data from connected APIs.
+Relevance
+Ensures predictions use the latest environmental and health data.
+Scheduled Sync
+Automatically runs synchronization at specific intervals.
+• 
+• 
+• 
+• 
+• 
+• 
+9Examples:
+every hour
+every 6 hours
+daily
+Relevance
+Prevents outdated data from affecting predictions.
+Data Validation
+Checks uploaded data for:
+missing values
+duplicates
+invalid formats
+Relevance
+Improves prediction accuracy and system reliability.
+Sync Logs
+Displays synchronization history.
+Relevance
+Helps administrators track data updates and troubleshoot issues.
+6. Users & Roles UI
+Purpose
+Controls system access and user permissions.
+Users & Roles Components
+User Management
+Displays registered users.
+• 
+• 
+• 
+• 
+• 
+• 
+10Relevance
+Allows administrators to manage staff access.
+Roles & Permissions
+Defines what users can access.
+Examples:
+Admin
+Health Officer
+Data Analyst
+Viewer
+Relevance
+Protects sensitive system functions.
+Activity Logs
+Tracks user activities.
+Examples:
+login time
+alerts sent
+data uploaded
+Relevance
+Improves accountability and monitoring.
+7. Settings UI
+Purpose
+Controls system behavior , AI configuration, notifications, and backup management.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+11Settings Tabs Explained
+SMS & API Settings
+Purpose
+Manages communication services and API connections.
+Components
+SMS Gateway Configuration
+Connects the system to SMS providers.
+Examples:
+Twilio
+Hubtel
+Africa's Talking
+API Configuration
+Stores API credentials for external data services.
+Data Sync Settings
+Controls automatic synchronization intervals.
+Thresholds
+Purpose
+Controls how sensitive the outbreak prediction system is.
+Disease Risk Thresholds
+Sets risk detection levels for diseases.
+Examples:
+malaria threshold
+cholera threshold
+dengue threshold
+• 
+• 
+• 
+• 
+• 
+• 
+12Relevance
+Determines when the AI should classify a disease risk as dangerous.
+Environmental Thresholds
+Defines environmental trigger values.
+Examples:
+rainfall level
+humidity percentage
+flood level
+temperature threshold
+Relevance
+Environmental conditions directly influence disease outbreaks.
+Alert Severity Configuration
+Defines risk ranges.
+Examples:
+Low Risk
+Moderate Risk
+High Risk
+Critical Risk
+Relevance
+Controls how the system categorizes outbreak severity.
+Live Risk Preview
+Displays real-time risk calculations based on selected thresholds.
+Relevance
+Allows administrators to test and visualize threshold changes.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+13Backups
+Purpose
+Protects system data from loss.
+Automatic Backup
+Automatically saves system data.
+Relevance
+Prevents accidental data loss.
+Backup Frequency
+Defines how often backups occur .
+Examples:
+hourly
+daily
+weekly
+Relevance
+Ensures data remains up to date.
+Cloud Backup
+Stores backups in cloud storage.
+Relevance
+Improves disaster recovery.
+Restore Backup
+Restores previous system data.
+• 
+• 
+• 
+14Relevance
+Useful during system failure or corruption.
+Backup Logs
+Displays backup history.
+Relevance
+Helps administrators monitor backup health.
+Notifications
+Purpose
+Controls system alerts and communication behavior .
+Notification Preferences
+Allows enabling/disabling:
+SMS alerts
+email alerts
+push notifications
+Relevance
+Customizes how users receive information.
+Escalation Settings
+Controls repeated alerts during emergencies.
+Relevance
+Ensures urgent outbreaks are not ignored.
+• 
+• 
+• 
+15AI Sensitivity
+Purpose
+Controls AI behavior and prediction strictness.
+Detection Sensitivity
+Determines how aggressively the AI detects outbreaks.
+Examples:
+Low
+Balanced
+High
+Aggressive
+Relevance
+Higher sensitivity may detect outbreaks earlier but can increase false alarms.
+Confidence Threshold
+Minimum confidence required before showing predictions.
+Relevance
+Improves reliability of AI results.
+Auto Retrain
+Automatically retrains the AI model using new data.
+Relevance
+Keeps predictions accurate over time.
+Explainable AI
+Shows factors affecting predictions.
+• 
+• 
+• 
+• 
+16Relevance
+Improves transparency and academic credibility.
+System Preferences
+Purpose
+Controls general application behavior .
+Theme Settings
+Allows switching between light and dark mode.
+Relevance
+Improves user experience.
+Language Settings
+Changes application language.
+Relevance
+Supports localization.
+Dashboard Preferences
+Defines default startup pages and layout behavior .
+Relevance
+Improves workflow efficiency.
+Profile & Account Settings UI
+Purpose
+Allows users to manage their personal account.
+17Components
+Profile Information
+Stores user details.
+Examples:
+name
+email
+phone number
+role
+Password Management
+Allows changing passwords.
+Relevance
+Improves account security.
+Notification Preferences
+Controls personal alert preferences.
+Relevance
+Customizes user experience.
+Session Activity
+Displays login history and active sessions.
+Relevance
+Improves account monitoring.
+Conclusion
+The ClimAlerts UI system is designed to simulate a real-world climate-health intelligence platform.
+• 
+• 
+• 
+• 
+18Each component contributes to:
+outbreak prediction
+environmental monitoring
+emergency communication
+decision support
+health data management
+AI-assisted public health response
+The design combines:
+modern dashboard principles
+public health monitoring concepts
+AI explainability
+enterprise SaaS architecture
+research-focused analytics
+This makes ClimAlerts suitable for:
+academic projects
+public health research
+grant demonstrations
+outbreak preparedness systems
+smart health monitoring platforms
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+19
