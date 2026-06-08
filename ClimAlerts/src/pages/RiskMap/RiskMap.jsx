@@ -10,6 +10,7 @@ import {
   Target, ShieldCheck, Bell, TrendingUp, TrendingDown, Minus, Play, Stethoscope, CloudRain, Share2, X, Maximize, Plus, Info, ChevronDown
 } from 'lucide-react';
 import './RiskMap.css';
+import { CustomDropdown } from '../../components/common/CustomDropdown';
 
 /* ── Constants ────────────────────────────────────────────── */
 const RISK_COLORS = {
@@ -544,13 +545,18 @@ export const RiskMap = () => {
             <h4>Disease</h4>
             <div className="rm-select-wrapper">
               <Activity size={16} color="#16A34A" />
-              <select className="rm-select" value={disease} onChange={e => setDisease(e.target.value)}>
-                <option value="all">All Diseases</option>
-                <option value="malaria">Malaria</option>
-                <option value="dengue">Dengue Fever</option>
-                <option value="cholera">Cholera</option>
-                <option value="typhoid">Typhoid Fever</option>
-              </select>
+              <CustomDropdown 
+                className="rm-select custom-dropdown" 
+                value={disease} 
+                onChange={setDisease}
+                options={[
+                  { value: 'all', label: 'All Diseases' },
+                  { value: 'malaria', label: 'Malaria' },
+                  { value: 'dengue', label: 'Dengue Fever' },
+                  { value: 'cholera', label: 'Cholera' },
+                  { value: 'typhoid', label: 'Typhoid Fever' }
+                ]}
+              />
             </div>
           </div>
 

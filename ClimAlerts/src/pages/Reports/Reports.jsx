@@ -11,6 +11,7 @@ import {
   CartesianGrid, Tooltip, Legend, BarChart, Bar 
 } from 'recharts';
 import './Reports.css';
+import { CustomDropdown } from '../../components/common/CustomDropdown';
 
 // ---------- Mock Data ----------
 
@@ -105,45 +106,48 @@ export const Reports = () => {
           {/* Disease Type Filter */}
           <div className="filter-item">
             <span className="filter-label">Disease Type</span>
-            <select 
+            <CustomDropdown 
               value={selectedDisease} 
-              onChange={(e) => setSelectedDisease(e.target.value)}
-              className="filter-select"
-            >
-              <option value="Malaria">Malaria</option>
-              <option value="Dengue Fever">Dengue Fever</option>
-              <option value="Cholera">Cholera</option>
-              <option value="All">All Diseases</option>
-            </select>
+              onChange={setSelectedDisease}
+              className="filter-select custom-dropdown"
+              options={[
+                { value: 'Malaria', label: 'Malaria' },
+                { value: 'Dengue Fever', label: 'Dengue Fever' },
+                { value: 'Cholera', label: 'Cholera' },
+                { value: 'All', label: 'All Diseases' }
+              ]}
+            />
           </div>
 
           {/* Region Filter */}
           <div className="filter-item">
             <span className="filter-label">Region</span>
-            <select 
+            <CustomDropdown 
               value={selectedRegion} 
-              onChange={(e) => setSelectedRegion(e.target.value)}
-              className="filter-select"
-            >
-              <option value="All Regions">All Regions</option>
-              <option value="Volta Region">Volta Region</option>
-              <option value="Ashanti Region">Ashanti Region</option>
-              <option value="Greater Accra">Greater Accra</option>
-            </select>
+              onChange={setSelectedRegion}
+              className="filter-select custom-dropdown"
+              options={[
+                { value: 'All Regions', label: 'All Regions' },
+                { value: 'Volta Region', label: 'Volta Region' },
+                { value: 'Ashanti Region', label: 'Ashanti Region' },
+                { value: 'Greater Accra', label: 'Greater Accra' }
+              ]}
+            />
           </div>
 
           {/* Report Type Filter */}
           <div className="filter-item">
             <span className="filter-label">Report Type</span>
-            <select 
+            <CustomDropdown 
               value={selectedReportType} 
-              onChange={(e) => setSelectedReportType(e.target.value)}
-              className="filter-select"
-            >
-              <option value="All Reports">All Reports</option>
-              <option value="PDF">PDF Reports</option>
-              <option value="CSV">CSV Data Sheets</option>
-            </select>
+              onChange={setSelectedReportType}
+              className="filter-select custom-dropdown"
+              options={[
+                { value: 'All Reports', label: 'All Reports' },
+                { value: 'PDF', label: 'PDF Reports' },
+                { value: 'CSV', label: 'CSV Data Sheets' }
+              ]}
+            />
           </div>
 
           {/* Filter Action Button */}

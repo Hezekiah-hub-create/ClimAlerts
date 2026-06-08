@@ -200,31 +200,52 @@
 
 .users-data-table {
   width: 100%;
-  border-collapse: collapse;
-  font-size: 0.8rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.85rem;
 }
 
 .users-data-table th {
   text-align: left;
-  padding: 0.85rem 1.25rem;
-  background-color: #F9FAFB;
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--color-text-muted);
+  padding: 1rem 1.25rem;
+  background: #F8FAFC;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748B;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
-  border-bottom: 1px solid var(--color-border);
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.users-data-table th:first-child {
+  border-top-left-radius: var(--radius-md);
+}
+
+.users-data-table th:last-child {
+  border-top-right-radius: var(--radius-md);
 }
 
 .users-data-table td {
-  padding: 0.85rem 1.25rem;
-  border-bottom: 1px solid var(--color-border);
-  color: var(--color-text-main);
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
   vertical-align: middle;
+  transition: background-color 0.2s ease;
+}
+
+.users-data-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.users-data-table tbody tr:hover td {
+  background-color: #F8FAFC;
 }
 
 .users-data-table tbody tr:hover {
-  background-color: #F9FAFB;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  z-index: 10;
+  position: relative;
 }
 
 .user-profile-cell {

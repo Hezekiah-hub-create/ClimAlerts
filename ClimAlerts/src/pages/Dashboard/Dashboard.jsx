@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import './Dashboard.css';
+import { CustomDropdown } from '../../components/common/CustomDropdown';
 import { VoltaRiskMap } from '../../components/VoltaRiskMap/VoltaRiskMap';
 
 const outbreakData = [
@@ -289,9 +290,14 @@ export const Dashboard = () => {
         <div className="card">
           <div className="card-header">
             <h3>Live Outbreak Activity (Last 7 Days)</h3>
-            <select className="select-sm">
-              <option>All Diseases</option>
-            </select>
+            <CustomDropdown
+                    value={'All Diseases'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: 'All Diseases', label: 'All Diseases' },
+                  ]}
+                  />
           </div>
           <div className="card-body" style={{ height: '240px' }}>
             <ResponsiveContainer width="100%" height="100%">

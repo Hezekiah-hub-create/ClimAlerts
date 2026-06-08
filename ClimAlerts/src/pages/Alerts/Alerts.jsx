@@ -12,6 +12,7 @@ import {
   CartesianGrid, Tooltip, PieChart, Pie, Cell 
 } from 'recharts';
 import './Alerts.css';
+import { CustomDropdown } from '../../components/common/CustomDropdown';
 
 // ---------- Mock Data ----------
 
@@ -196,29 +197,31 @@ export const Alerts = () => {
             <div className="compose-row-split">
               <div className="compose-form-group">
                 <label className="compose-lbl">Recipient Group</label>
-                <select 
-                  className="compose-select" 
+                <CustomDropdown 
+                  className="compose-select custom-dropdown" 
                   value={recipientGroup} 
-                  onChange={(e) => setRecipientGroup(e.target.value)}
-                >
-                  <option value="Health Officials (Volta Region)">Health Officials (Volta Region)</option>
-                  <option value="Farmers Group">Farmers Group</option>
-                  <option value="General Public">General Public</option>
-                </select>
+                  onChange={setRecipientGroup}
+                  options={[
+                    { value: 'Health Officials (Volta Region)', label: 'Health Officials (Volta Region)' },
+                    { value: 'Farmers Group', label: 'Farmers Group' },
+                    { value: 'General Public', label: 'General Public' }
+                  ]}
+                />
               </div>
 
               <div className="compose-form-group">
                 <label className="compose-lbl">Or Select Region</label>
-                <select 
-                  className="compose-select" 
+                <CustomDropdown 
+                  className="compose-select custom-dropdown" 
                   value={selectedRegion} 
-                  onChange={(e) => setSelectedRegion(e.target.value)}
-                >
-                  <option value="Volta Region">Volta Region</option>
-                  <option value="Ashanti Region">Ashanti Region</option>
-                  <option value="Greater Accra">Greater Accra</option>
-                  <option value="Northern Region">Northern Region</option>
-                </select>
+                  onChange={setSelectedRegion}
+                  options={[
+                    { value: 'Volta Region', label: 'Volta Region' },
+                    { value: 'Ashanti Region', label: 'Ashanti Region' },
+                    { value: 'Greater Accra', label: 'Greater Accra' },
+                    { value: 'Northern Region', label: 'Northern Region' }
+                  ]}
+                />
               </div>
             </div>
 

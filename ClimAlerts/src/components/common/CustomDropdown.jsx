@@ -1,17 +1,19 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Check } from 'lucide-react';
 import './CustomDropdown.css';
 
 export const CustomDropdown = ({ 
-  options = [], 
   value, 
   onChange, 
-  placeholder = "Select an option...", 
-  className = "", 
-  icon: Icon 
+  options, 
+  placeholder = 'Select an option',
+  className = '',
+  disabled = false
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
+
+  const selectedOption = options.find(opt => opt.value === value) || null;
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -19,55 +21,45 @@ export const CustomDropdown = ({
         setIsOpen(false);
       }
     };
-    document.addEventListener("mousedown", handleClickOutside);
+
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [dropdownRef]);
+  }, []);
 
-  // Convert options to standard format if they are just strings
-  const formattedOptions = options.map(opt => {
-    if (typeof opt === 'string' || typeof opt === 'number') {
-      return { value: opt, label: String(opt) };
-    }
-    return opt;
-  });
-
-  const selectedOption = formattedOptions.find((opt) => opt.value === value);
+  const handleSelect = (option) => {
+    onChange(option.value);
+    setIsOpen(false);
+  };
 
   return (
-    <div className={`custom-dropdown-container ${className}`} ref={dropdownRef}>
-      <button 
-        type="button" 
-        className={`custom-dropdown-trigger ${isOpen ? 'open' : ''}`} 
-        onClick={() => setIsOpen(!isOpen)}
+    <div 
+      className={`custom-dropdown-container ${className} ${disabled ? 'disabled' : ''} ${isOpen ? 'open' : ''}`} 
+      ref={dropdownRef}
+    >
+      <div 
+        className="custom-dropdown-header" 
+        onClick={() => !disabled && setIsOpen(!isOpen)}
       >
-        <div className="custom-dropdown-value">
-          {Icon && <Icon size={16} className="custom-dropdown-icon" />}
-          <span className={!selectedOption ? "placeholder" : ""}>
-            {selectedOption ? selectedOption.label : placeholder}
-          </span>
-        </div>
-        <ChevronDown size={16} className="custom-dropdown-chevron" />
-      </button>
+        <span className={`custom-dropdown-selected ${!selectedOption ? 'placeholder' : ''}`}>
+          {selectedOption ? selectedOption.label : placeholder}
+        </span>
+        <ChevronDown size={16} className={`custom-dropdown-icon ${isOpen ? 'rotate' : ''}`} />
+      </div>
 
-      {isOpen && (
+      {isOpen && !disabled && (
         <div className="custom-dropdown-menu">
-          {formattedOptions.map((option) => (
-            <div
-              key={option.value}
-              className={`custom-dropdown-item ${option.value === value ? 'selected' : ''}`}
-              onClick={() => {
-                onChange(option.value);
-                setIsOpen(false);
-              }}
+          {options.map((option, idx) => (
+            <div 
+              key={`${option.value}-${idx}`}
+              className={`custom-dropdown-item ${value === option.value ? 'selected' : ''}`}
+              onClick={() => handleSelect(option)}
             >
-              {option.label}
+              <span className="custom-dropdown-item-label">{option.label}</span>
+              {value === option.value && <Check size={14} className="custom-dropdown-check" />}
             </div>
           ))}
-          {formattedOptions.length === 0 && (
-            <div className="custom-dropdown-empty">No options available</div>
-          )}
         </div>
       )}
     </div>

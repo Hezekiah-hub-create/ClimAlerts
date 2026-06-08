@@ -15,6 +15,7 @@ import {
 } from 'recharts';
 import { Bug, Droplet, Thermometer, Waves, Siren, CloudRain, Calendar, Bot, BarChart, Puzzle, Sparkles } from 'lucide-react';
 import './Settings.css';
+import { CustomDropdown } from '../../components/common/CustomDropdown';
 
 // ---------- Mock Data ----------
 
@@ -125,11 +126,16 @@ export const Settings = () => {
               <div className="sec-body grid-four-cols">
                 <div className="input-group-field">
                   <label>SMS Provider</label>
-                  <select value={selectedProvider} onChange={e => setSelectedProvider(e.target.value)} className="sett-input select">
-                    <option value="Twilio">Twilio</option>
-                    <option value="Infobip">Infobip</option>
-                    <option value="Africa\'s Talking">Africa's Talking</option>
-                  </select>
+                  <CustomDropdown
+                    value={selectedProvider}
+                    onChange={setSelectedProvider}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: 'Twilio', label: 'Twilio' },
+                    { value: 'Infobip', label: 'Infobip' },
+                    { value: 'Africa\'s Talking', label: 'Africa\'s Talking' },
+                  ]}
+                  />
                 </div>
                 <div className="input-group-field password-wrapper">
                   <label>Account SID</label>
@@ -204,19 +210,29 @@ export const Settings = () => {
               <div className="sec-body grid-three-cols">
                 <div className="input-group-field">
                   <label>Data Retention Period</label>
-                  <select className="sett-input select">
-                    <option>2 Years</option>
-                    <option>5 Years</option>
-                    <option>Indefinite</option>
-                  </select>
+                  <CustomDropdown
+                    value={'2 Years'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '2 Years', label: '2 Years' },
+                    { value: '5 Years', label: '5 Years' },
+                    { value: 'Indefinite', label: 'Indefinite' },
+                  ]}
+                  />
                 </div>
                 <div className="input-group-field">
                   <label>Default Time Range</label>
-                  <select className="sett-input select">
-                    <option>7 Days</option>
-                    <option>30 Days</option>
-                    <option>90 Days</option>
-                  </select>
+                  <CustomDropdown
+                    value={'7 Days'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '7 Days', label: '7 Days' },
+                    { value: '30 Days', label: '30 Days' },
+                    { value: '90 Days', label: '90 Days' },
+                  ]}
+                  />
                 </div>
                 <div className="input-group-field toggle-control-row">
                   <div className="toggle-lbls">
@@ -240,19 +256,29 @@ export const Settings = () => {
                 </div>
                 <div className="input-group-field">
                   <label>Backup Frequency</label>
-                  <select className="sett-input select">
-                    <option>Daily</option>
-                    <option>Weekly</option>
-                    <option>Monthly</option>
-                  </select>
+                  <CustomDropdown
+                    value={'Daily'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: 'Daily', label: 'Daily' },
+                    { value: 'Weekly', label: 'Weekly' },
+                    { value: 'Monthly', label: 'Monthly' },
+                  ]}
+                  />
                 </div>
                 <div className="input-group-field">
                   <label>System Language</label>
-                  <select className="sett-input select">
-                    <option>English</option>
-                    <option>French</option>
-                    <option>Spanish</option>
-                  </select>
+                  <CustomDropdown
+                    value={'English'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: 'English', label: 'English' },
+                    { value: 'French', label: 'French' },
+                    { value: 'Spanish', label: 'Spanish' },
+                  ]}
+                  />
                 </div>
               </div>
             </div>
@@ -266,11 +292,16 @@ export const Settings = () => {
               <div className="sec-body grid-three-cols">
                 <div className="input-group-field">
                   <label>Default Risk Level</label>
-                  <select className="sett-input select">
-                    <option>Moderate</option>
-                    <option>Low</option>
-                    <option>High</option>
-                  </select>
+                  <CustomDropdown
+                    value={'Moderate'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: 'Moderate', label: 'Moderate' },
+                    { value: 'Low', label: 'Low' },
+                    { value: 'High', label: 'High' },
+                  ]}
+                  />
                 </div>
                 <div className="input-group-field">
                   <label>Max Alert Recipients</label>
@@ -278,11 +309,16 @@ export const Settings = () => {
                 </div>
                 <div className="input-group-field">
                   <label>Session Timeout</label>
-                  <select className="sett-input select">
-                    <option>30 Minutes</option>
-                    <option>1 Hour</option>
-                    <option>4 Hours</option>
-                  </select>
+                  <CustomDropdown
+                    value={'30 Minutes'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '30 Minutes', label: '30 Minutes' },
+                    { value: '1 Hour', label: '1 Hour' },
+                    { value: '4 Hours', label: '4 Hours' },
+                  ]}
+                  />
                 </div>
               </div>
             </div>
@@ -683,25 +719,40 @@ export const Settings = () => {
                   <div className="sec-body behavior-fields-stack">
                     <div className="input-group-field">
                       <label>Alert Frequency</label>
-                      <select className="sett-input select">
-                        <option>Immediate</option>
-                        <option>Hourly</option>
-                        <option>Daily Summary</option>
-                      </select>
+                      <CustomDropdown
+                    value={'Immediate'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: 'Immediate', label: 'Immediate' },
+                    { value: 'Hourly', label: 'Hourly' },
+                    { value: 'Daily Summary', label: 'Daily Summary' },
+                  ]}
+                  />
                     </div>
                     <div className="input-group-field">
                       <label>Quiet Hours</label>
-                      <select className="sett-input select">
-                        <option>10:00 PM - 6:00 AM</option>
-                        <option>Disabled</option>
-                      </select>
+                      <CustomDropdown
+                    value={'10:00 PM - 6:00 AM'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '10:00 PM - 6:00 AM', label: '10:00 PM - 6:00 AM' },
+                    { value: 'Disabled', label: 'Disabled' },
+                  ]}
+                  />
                     </div>
                     <div className="input-group-field">
                       <label>Escalation Timing</label>
-                      <select className="sett-input select">
-                        <option>30 Minutes</option>
-                        <option>1 Hour</option>
-                      </select>
+                      <CustomDropdown
+                    value={'30 Minutes'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '30 Minutes', label: '30 Minutes' },
+                    { value: '1 Hour', label: '1 Hour' },
+                  ]}
+                  />
                     </div>
                     <div className="input-group-field toggle-control-row">
                       <label>Repeat Alerts</label>
@@ -919,10 +970,15 @@ export const Settings = () => {
                   <div className="sec-body prediction-settings-stack">
                     <div className="input-group-field">
                       <label>Forecast Window</label>
-                      <select className="sett-input select">
-                        <option>14 Days</option>
-                        <option>30 Days</option>
-                      </select>
+                      <CustomDropdown
+                    value={'14 Days'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '14 Days', label: '14 Days' },
+                    { value: '30 Days', label: '30 Days' },
+                  ]}
+                  />
                     </div>
 
                     <div className="input-group-field">
@@ -935,10 +991,15 @@ export const Settings = () => {
 
                     <div className="input-group-field">
                       <label>Minimum Data Requirement</label>
-                      <select className="sett-input select">
-                        <option>2 Years</option>
-                        <option>5 Years</option>
-                      </select>
+                      <CustomDropdown
+                    value={'2 Years'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '2 Years', label: '2 Years' },
+                    { value: '5 Years', label: '5 Years' },
+                  ]}
+                  />
                     </div>
                   </div>
                 </div>
@@ -1124,10 +1185,15 @@ export const Settings = () => {
 
                   <div className="input-group-field">
                     <label>Retraining Frequency</label>
-                    <select className="sett-input select">
-                      <option>Weekly</option>
-                      <option>Monthly</option>
-                    </select>
+                    <CustomDropdown
+                    value={'Weekly'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: 'Weekly', label: 'Weekly' },
+                    { value: 'Monthly', label: 'Monthly' },
+                  ]}
+                  />
                   </div>
 
                   <div className="backup-meta-list" style={{ marginTop: '0.5rem' }}>
@@ -1315,27 +1381,42 @@ export const Settings = () => {
                   <div className="sec-body behavior-fields-stack">
                     <div className="input-group-field">
                       <label>Session Timeout</label>
-                      <select className="sett-input select">
-                        <option>30 Minutes</option>
-                        <option>1 Hour</option>
-                        <option>4 Hours</option>
-                      </select>
+                      <CustomDropdown
+                    value={'30 Minutes'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '30 Minutes', label: '30 Minutes' },
+                    { value: '1 Hour', label: '1 Hour' },
+                    { value: '4 Hours', label: '4 Hours' },
+                  ]}
+                  />
                     </div>
                     <div className="input-group-field">
                       <label>Max Concurrent Sessions</label>
-                      <select className="sett-input select">
-                        <option>3 Sessions</option>
-                        <option>5 Sessions</option>
-                        <option>Unlimited</option>
-                      </select>
+                      <CustomDropdown
+                    value={'3 Sessions'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '3 Sessions', label: '3 Sessions' },
+                    { value: '5 Sessions', label: '5 Sessions' },
+                    { value: 'Unlimited', label: 'Unlimited' },
+                  ]}
+                  />
                     </div>
                     <div className="input-group-field">
                       <label>Password Expiry</label>
-                      <select className="sett-input select">
-                        <option>90 Days</option>
-                        <option>180 Days</option>
-                        <option>Never</option>
-                      </select>
+                      <CustomDropdown
+                    value={'90 Days'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '90 Days', label: '90 Days' },
+                    { value: '180 Days', label: '180 Days' },
+                    { value: 'Never', label: 'Never' },
+                  ]}
+                  />
                     </div>
                   </div>
                 </div>
@@ -1362,10 +1443,15 @@ export const Settings = () => {
                     </div>
                     <div className="input-group-field">
                       <label>Max Failed Login Attempts</label>
-                      <select className="sett-input select">
-                        <option>5 Attempts</option>
-                        <option>10 Attempts</option>
-                      </select>
+                      <CustomDropdown
+                    value={'5 Attempts'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '5 Attempts', label: '5 Attempts' },
+                    { value: '10 Attempts', label: '10 Attempts' },
+                  ]}
+                  />
                     </div>
                   </div>
                 </div>
@@ -1555,26 +1641,41 @@ export const Settings = () => {
               <div className="sec-body behavior-fields-stack">
                 <div className="input-group-field">
                   <label>System Language</label>
-                  <select className="sett-input select">
-                    <option>English (US)</option>
-                    <option>French (FR)</option>
-                  </select>
+                  <CustomDropdown
+                    value={'English (US)'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: 'English (US)', label: 'English (US)' },
+                    { value: 'French (FR)', label: 'French (FR)' },
+                  ]}
+                  />
                 </div>
 
                 <div className="input-group-field">
                   <label>Time Zone</label>
-                  <select className="sett-input select">
-                    <option>(UTC+01:00) West Africa Time</option>
-                    <option>(UTC+00:00) Greenwich Mean Time</option>
-                  </select>
+                  <CustomDropdown
+                    value={'(UTC+01:00) West Africa Time'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '(UTC+01:00) West Africa Time', label: '(UTC+01:00) West Africa Time' },
+                    { value: '(UTC+00:00) Greenwich Mean Time', label: '(UTC+00:00) Greenwich Mean Time' },
+                  ]}
+                  />
                 </div>
 
                 <div className="input-group-field">
                   <label>Date Format</label>
-                  <select className="sett-input select">
-                    <option>May 23, 2025 (MMM DD, YYYY)</option>
-                    <option>23/05/2025 (DD/MM/YYYY)</option>
-                  </select>
+                  <CustomDropdown
+                    value={'May 23, 2025 (MMM DD, YYYY)'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: 'May 23, 2025 (MMM DD, YYYY)', label: 'May 23, 2025 (MMM DD, YYYY)' },
+                    { value: '23/05/2025 (DD/MM/YYYY)', label: '23/05/2025 (DD/MM/YYYY)' },
+                  ]}
+                  />
                 </div>
 
                 <div className="input-group-field">
@@ -1596,18 +1697,28 @@ export const Settings = () => {
 
                 <div className="input-group-field">
                   <label>System Currency</label>
-                  <select className="sett-input select">
-                    <option>USD - US Dollar</option>
-                    <option>GHS - Ghana Cedi</option>
-                  </select>
+                  <CustomDropdown
+                    value={'USD - US Dollar'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: 'USD - US Dollar', label: 'USD - US Dollar' },
+                    { value: 'GHS - Ghana Cedi', label: 'GHS - Ghana Cedi' },
+                  ]}
+                  />
                 </div>
 
                 <div className="input-group-field">
                   <label>Units System</label>
-                  <select className="sett-input select">
-                    <option>Metric (°C, mm, km)</option>
-                    <option>Imperial (°F, inches, miles)</option>
-                  </select>
+                  <CustomDropdown
+                    value={'Metric (°C, mm, km)'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: 'Metric (°C, mm, km)', label: 'Metric (°C, mm, km)' },
+                    { value: 'Imperial (°F, inches, miles)', label: 'Imperial (°F, inches, miles)' },
+                  ]}
+                  />
                 </div>
               </div>
               <div className="sec-footer-actions-row">
@@ -1624,27 +1735,42 @@ export const Settings = () => {
               <div className="sec-body behavior-fields-stack">
                 <div className="input-group-field">
                   <label>Default Landing Page</label>
-                  <select className="sett-input select">
-                    <option>Dashboard Overview</option>
-                    <option>AI Predictions</option>
-                    <option>Risk Map</option>
-                  </select>
+                  <CustomDropdown
+                    value={'Dashboard Overview'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: 'Dashboard Overview', label: 'Dashboard Overview' },
+                    { value: 'AI Predictions', label: 'AI Predictions' },
+                    { value: 'Risk Map', label: 'Risk Map' },
+                  ]}
+                  />
                 </div>
 
                 <div className="input-group-field">
                   <label>Refresh Interval</label>
-                  <select className="sett-input select">
-                    <option>5 Minutes</option>
-                    <option>15 Minutes</option>
-                  </select>
+                  <CustomDropdown
+                    value={'5 Minutes'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '5 Minutes', label: '5 Minutes' },
+                    { value: '15 Minutes', label: '15 Minutes' },
+                  ]}
+                  />
                 </div>
 
                 <div className="input-group-field">
                   <label>Default Map Region</label>
-                  <select className="sett-input select">
-                    <option>Volta Region</option>
-                    <option>Ashanti Region</option>
-                  </select>
+                  <CustomDropdown
+                    value={'Volta Region'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: 'Volta Region', label: 'Volta Region' },
+                    { value: 'Ashanti Region', label: 'Ashanti Region' },
+                  ]}
+                  />
                 </div>
 
                 <div className="input-group-field">
@@ -1703,10 +1829,15 @@ export const Settings = () => {
               <div className="sec-body behavior-fields-stack">
                 <div className="input-group-field">
                   <label>Cache Size</label>
-                  <select className="sett-input select">
-                    <option>512 MB</option>
-                    <option>1 GB</option>
-                  </select>
+                  <CustomDropdown
+                    value={'512 MB'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '512 MB', label: '512 MB' },
+                    { value: '1 GB', label: '1 GB' },
+                  ]}
+                  />
                 </div>
 
                 <div className="input-group-field toggle-control-row">
@@ -1731,26 +1862,41 @@ export const Settings = () => {
 
                 <div className="input-group-field">
                   <label>Data Retention</label>
-                  <select className="sett-input select">
-                    <option>5 Years</option>
-                    <option>10 Years</option>
-                  </select>
+                  <CustomDropdown
+                    value={'5 Years'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '5 Years', label: '5 Years' },
+                    { value: '10 Years', label: '10 Years' },
+                  ]}
+                  />
                 </div>
 
                 <div className="input-group-field">
                   <label>Log Retention</label>
-                  <select className="sett-input select">
-                    <option>1 Year</option>
-                    <option>2 Years</option>
-                  </select>
+                  <CustomDropdown
+                    value={'1 Year'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: '1 Year', label: '1 Year' },
+                    { value: '2 Years', label: '2 Years' },
+                  ]}
+                  />
                 </div>
 
                 <div className="input-group-field">
                   <label>Cleanup Frequency</label>
-                  <select className="sett-input select">
-                    <option>Weekly</option>
-                    <option>Monthly</option>
-                  </select>
+                  <CustomDropdown
+                    value={'Weekly'}
+                    onChange={() => {}}
+                    className="sett-input custom-dropdown"
+                    options={[
+                    { value: 'Weekly', label: 'Weekly' },
+                    { value: 'Monthly', label: 'Monthly' },
+                  ]}
+                  />
                 </div>
 
                 <div className="input-group-field toggle-control-row">
