@@ -129,9 +129,7 @@
   font-weight: 600;
 }
 
-.risk-map-card {
-  /* Fits the first column of the 1.6fr 1fr layout naturally */
-}
+/* .risk-map-card fits the first column of the 1.6fr 1fr layout naturally */
 
 .risk-map-content {
   display: flex;

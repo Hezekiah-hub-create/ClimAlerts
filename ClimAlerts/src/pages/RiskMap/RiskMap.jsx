@@ -58,6 +58,7 @@ const fmt = (n) => n?.toLocaleString() ?? '—';
 /* ─────────────────────────────────────────────────────────── */
 
 export const RiskMap = () => {
+  const mapZoneRef   = useRef(null);
   const mapContainer = useRef(null);
   const mapRef       = useRef(null);
   const popupRef     = useRef(null);
@@ -104,6 +105,7 @@ export const RiskMap = () => {
       container: mapContainer.current,
       style: {
         version: 8,
+        glyphs: 'https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf',
         sources: {},
         layers: [
           {
@@ -113,16 +115,14 @@ export const RiskMap = () => {
           }
         ]
       },
-      center: [0.55, 6.55],
+      center: [0.55, 6.6],
       zoom: 7.0,
-      minZoom: 5.5,
-      maxZoom: 13,
+      minZoom: 8.1,
+      maxZoom: 12,
       dragRotate: false,
       pitchWithRotate: false,
     });
     mapRef.current = map;
-
-    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
 
     popupRef.current = new maplibregl.Popup({
       closeButton: false,
@@ -259,16 +259,45 @@ export const RiskMap = () => {
         // Roads Layer
         if (roadsData) {
           map.addLayer({
+            id: 'roads-casing',
+            type: 'line',
+            source: 'volta-roads',
+            layout: {
+              'line-cap': 'round',
+              'line-join': 'round',
+              'visibility': 'none'
+            },
+            paint: {
+              'line-color': '#ffffff',
+              'line-width': [
+                'interpolate', ['linear'], ['zoom'],
+                6, ['match', ['get', 'highway'], ['primary', 'trunk', 'primary_link', 'trunk_link'], 4, ['secondary', 'secondary_link'], 2.8, 2.2],
+                12, ['match', ['get', 'highway'], ['primary', 'trunk', 'primary_link', 'trunk_link'], 8, ['secondary', 'secondary_link'], 6, 4.5]
+              ],
+              'line-opacity': 0.9,
+            },
+          });
+
+          map.addLayer({
             id: 'roads-line',
             type: 'line',
             source: 'volta-roads',
+            layout: {
+              'line-cap': 'round',
+              'line-join': 'round',
+              'visibility': 'none'
+            },
             paint: {
-              'line-color': '#F59E0B',
+              'line-color': [
+                'match', ['get', 'highway'],
+                ['primary', 'trunk', 'primary_link', 'trunk_link'], '#0f172a',
+                ['secondary', 'secondary_link'], '#334155',
+                '#64748b'
+              ],
               'line-width': [
-                'match', ['get', 'type'],
-                'primary', 3.5,
-                'secondary', 2,
-                2
+                'interpolate', ['linear'], ['zoom'],
+                6, ['match', ['get', 'highway'], ['primary', 'trunk', 'primary_link', 'trunk_link'], 2.5, ['secondary', 'secondary_link'], 1.8, 1.2],
+                12, ['match', ['get', 'highway'], ['primary', 'trunk', 'primary_link', 'trunk_link'], 5.5, ['secondary', 'secondary_link'], 4, 2.5]
               ],
               'line-opacity': 0.9,
             },
@@ -339,7 +368,7 @@ export const RiskMap = () => {
             type: 'symbol',
             source: 'volta-towns',
             filter: ['match', ['get', 'place'], ['city', 'town'], true, false],
-            minzoom: 7.0,
+            minzoom: 5.5,
             layout: {
               'text-field': ['get', 'name'],
               'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
@@ -364,7 +393,7 @@ export const RiskMap = () => {
             type: 'symbol',
             source: 'volta-towns',
             filter: ['==', ['get', 'place'], 'village'],
-            minzoom: 8.8,
+            minzoom: 6.5,
             layout: {
               'text-field': ['get', 'name'],
               'text-font': ['Open Sans Regular', 'Arial Unicode MS Regular'],
@@ -467,6 +496,7 @@ export const RiskMap = () => {
       }
       if (layerKey === 'roads') {
         vis('roads-line', next.roads);
+        vis('roads-casing', next.roads);
       }
       if (layerKey === 'facilities') {
         vis('facilities-points', next.facilities);
@@ -478,6 +508,12 @@ export const RiskMap = () => {
 
   return (
     <div className="riskmap-page">
+      {/* ── Page Header ── */}
+      <div className="riskmap-page-header">
+        <h1>Risk Map – Volta Region</h1>
+        <p>Interactive epidemiological risk analysis and vulnerability mapping</p>
+      </div>
+
       {/* ── Stats Row ── */}
       <div className="riskmap-stats">
         <div className="rm-stat-card">
@@ -602,7 +638,7 @@ export const RiskMap = () => {
           <div className="rm-map-header">
             <h3>Volta Region – District Risk Map <Info size={14} color="#6b7280" style={{marginLeft: 4, verticalAlign: 'middle'}}/></h3>
           </div>
-          <div className="rm-map-zone">
+          <div className="rm-map-zone" ref={mapZoneRef}>
             {!geoData && (
               <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 5, background: '#f0f4f0', borderRadius: 12, flexDirection: 'column', gap: 8, color: '#6b7280', fontSize: '0.88rem' }}>
                 <RefreshCw size={20} style={{ animation: 'spin 1s linear infinite' }} color="#16A34A" />
@@ -612,9 +648,15 @@ export const RiskMap = () => {
             <div ref={mapContainer} style={{ width: '100%', height: '100%', borderRadius: 12 }} />
             
             <div className="rm-map-controls-right">
-              <button><Plus size={16}/></button>
-              <button><Minus size={16}/></button>
-              <button className="maximize-btn"><Maximize size={16}/></button>
+              <button onClick={() => mapRef.current?.zoomIn()}><Plus size={16}/></button>
+              <button onClick={() => mapRef.current?.zoomOut()}><Minus size={16}/></button>
+              <button className="maximize-btn" onClick={() => {
+                if (!document.fullscreenElement) {
+                  mapZoneRef.current?.requestFullscreen?.().catch(err => console.warn(err));
+                } else {
+                  document.exitFullscreen?.();
+                }
+              }}><Maximize size={16}/></button>
             </div>
           </div>
 

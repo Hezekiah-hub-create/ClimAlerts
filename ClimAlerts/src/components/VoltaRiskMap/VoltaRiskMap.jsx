@@ -64,6 +64,7 @@ export const VoltaRiskMap = ({ layers }) => {
     vis('lake-fill', layers.lake);
 
     vis('roads-line', layers.roads);
+    vis('roads-casing', layers.roads);
 
     vis('facilities-points', layers.facilities);
     vis('facilities-labels', layers.facilities);
@@ -94,11 +95,6 @@ export const VoltaRiskMap = ({ layers }) => {
     });
 
     mapRef.current = map;
-
-    map.addControl(
-      new maplibregl.NavigationControl({ showCompass: false }),
-      'top-right'
-    );
 
     popupRef.current = new maplibregl.Popup({
       closeButton: false,
@@ -223,16 +219,45 @@ export const VoltaRiskMap = ({ layers }) => {
         // Roads Layer
         if (roadsData) {
           map.addLayer({
+            id: 'roads-casing',
+            type: 'line',
+            source: 'volta-roads',
+            layout: {
+              'line-cap': 'round',
+              'line-join': 'round',
+              'visibility': 'none'
+            },
+            paint: {
+              'line-color': '#ffffff',
+              'line-width': [
+                'interpolate', ['linear'], ['zoom'],
+                6, ['match', ['get', 'highway'], ['primary', 'trunk', 'primary_link', 'trunk_link'], 4, ['secondary', 'secondary_link'], 2.8, 2.2],
+                12, ['match', ['get', 'highway'], ['primary', 'trunk', 'primary_link', 'trunk_link'], 8, ['secondary', 'secondary_link'], 6, 4.5]
+              ],
+              'line-opacity': 0.9,
+            },
+          });
+
+          map.addLayer({
             id: 'roads-line',
             type: 'line',
             source: 'volta-roads',
+            layout: {
+              'line-cap': 'round',
+              'line-join': 'round',
+              'visibility': 'none'
+            },
             paint: {
-              'line-color': '#F59E0B', // Amber color for high visibility
+              'line-color': [
+                'match', ['get', 'highway'],
+                ['primary', 'trunk', 'primary_link', 'trunk_link'], '#0f172a',     // Dark slate for primary
+                ['secondary', 'secondary_link'], '#334155',   // Medium slate for secondary
+                '#64748b'                 // Light slate for others
+              ],
               'line-width': [
-                'match', ['get', 'type'],
-                'primary', 3.5,
-                'secondary', 2,
-                2
+                'interpolate', ['linear'], ['zoom'],
+                6, ['match', ['get', 'highway'], ['primary', 'trunk', 'primary_link', 'trunk_link'], 2.5, ['secondary', 'secondary_link'], 1.8, 1.2],
+                12, ['match', ['get', 'highway'], ['primary', 'trunk', 'primary_link', 'trunk_link'], 5.5, ['secondary', 'secondary_link'], 4, 2.5]
               ],
               'line-opacity': 0.9,
             },
@@ -298,7 +323,7 @@ export const VoltaRiskMap = ({ layers }) => {
             type: 'symbol',
             source: 'volta-towns',
             filter: ['match', ['get', 'place'], ['city', 'town'], true, false],
-            minzoom: 7.0,
+            minzoom: 5.5,
             layout: {
               'text-field': ['get', 'name'],
               'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
@@ -323,7 +348,7 @@ export const VoltaRiskMap = ({ layers }) => {
             type: 'symbol',
             source: 'volta-towns',
             filter: ['==', ['get', 'place'], 'village'],
-            minzoom: 8.8,
+            minzoom: 6.5,
             layout: {
               'text-field': ['get', 'name'],
               'text-font': ['Open Sans Regular', 'Arial Unicode MS Regular'],
