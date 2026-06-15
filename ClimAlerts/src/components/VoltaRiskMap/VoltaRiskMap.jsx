@@ -37,7 +37,7 @@ const BORDER_EXPR = [
   RISK_STROKE['Very Low'],
 ];
 
-export const VoltaRiskMap = ({ layers }) => {
+export const VoltaRiskMap = ({ layers, onDistrictClick }) => {
   const mapContainer = useRef(null);
   const mapRef       = useRef(null);
   const popupRef     = useRef(null);
@@ -82,7 +82,7 @@ export const VoltaRiskMap = ({ layers }) => {
           {
             id: 'background',
             type: 'background',
-            paint: { 'background-color': '#f8fafc' },
+            paint: { 'background-color': 'transparent' },
           }
         ]
       },
@@ -433,6 +433,13 @@ export const VoltaRiskMap = ({ layers }) => {
           }
           hoveredId = null;
           popupRef.current.remove();
+        });
+
+        // Click → select district
+        map.on('click', 'districts-fill', (e) => {
+          if (!e.features.length || !onDistrictClick) return;
+          const p = e.features[0].properties;
+          onDistrictClick(p);
         });
       })
       .catch(err => console.error('GeoJSON load error:', err));

@@ -124,11 +124,7 @@ const IconLeaf = () => (
    LOGIN COMPONENT
 ═══════════════════════════════════════════════════════════ */
 
-const MOCK_USERS = {
-  'admin@climalerts.com': { role: 'Administrator', name: 'System Admin', password: 'password123' },
-  'analyst@climalerts.com': { role: 'Analyst', name: 'Data Analyst', password: 'password123' },
-  'official@climalerts.com': { role: 'Health Official', name: 'Health Officer', password: 'password123' }
-};
+// Authentication is handled dynamically for demo purposes
 
 export const Login = () => {
   const [email, setEmail] = useState('');
@@ -148,16 +144,11 @@ export const Login = () => {
       setIsLoading(false); 
       
       const normalizedEmail = email.toLowerCase().trim();
-      let user = MOCK_USERS[normalizedEmail];
+      let assignedRole = 'Health Official'; // Default
+      if (normalizedEmail.includes('admin')) assignedRole = 'Administrator';
+      else if (normalizedEmail.includes('analyst')) assignedRole = 'Analyst';
       
-      // If the email isn't in our mock list, let's just let them in anyway for the demo
-      if (!user) {
-        let assignedRole = 'Health Official'; // Default
-        if (normalizedEmail.includes('admin')) assignedRole = 'Administrator';
-        else if (normalizedEmail.includes('analyst')) assignedRole = 'Analyst';
-        
-        user = { role: assignedRole, name: 'Demo User' };
-      }
+      let user = { role: assignedRole, name: 'Demo User' };
       
       // Skip strict password checking for demo purposes so you don't get locked out
       localStorage.setItem('climalerts_user', JSON.stringify({

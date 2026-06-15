@@ -6,19 +6,11 @@ import {
   Plus, TrendingUp, TrendingDown
 } from 'lucide-react';
 import './Users.css';
+import { fmtDateTime, hoursAgo, daysAgo } from '../../utils/dateUtils';
 
 // ---------- Mock Data ----------
 
-const usersList = [
-  { id: 1, name: 'Admin User', email: 'admin@climalerts.gov.gh', role: 'System Administrator', dept: 'Head Office', status: 'Active', active: 'May 23, 2025 08:30 AM', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100' },
-  { id: 2, name: 'Health Officer', email: 'health.officer@ghana.gov.gh', role: 'Health Officer', dept: 'Health Department', status: 'Active', active: 'May 23, 2025 07:45 AM', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100' },
-  { id: 3, name: 'Data Analyst', email: 'analyst@climalerts.gov.gh', role: 'Data Analyst', dept: 'Analytics Unit', status: 'Active', active: 'May 22, 2025 10:15 PM', avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100' },
-  { id: 4, name: 'Field Officer', email: 'field.officer@ghana.gov.gh', role: 'Field Officer', dept: 'Volta Region', status: 'Active', active: 'May 22, 2025 06:20 PM', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100' },
-  { id: 5, name: 'Regional Manager', email: 'region.manager@ghana.gov.gh', role: 'Regional Manager', dept: 'Ashanti Region', status: 'Active', active: 'May 22, 2025 04:10 PM', avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=100' },
-  { id: 6, name: 'Viewer', email: 'viewer@climalerts.gov.gh', role: 'Viewer', dept: 'Western Region', status: 'Inactive', active: 'May 20, 2025 11:30 AM', avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=100' },
-  { id: 7, name: 'Outbreak Coordinator', email: 'outbreak.coordinator@ghana.gov.gh', role: 'Health Officer', dept: 'Central Region', status: 'Active', active: 'May 20, 2025 09:05 AM', avatar: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100' },
-  { id: 8, name: 'Data Manager', email: 'data.manager@climalerts.gov.gh', role: 'Data Analyst', dept: 'Data Management', status: 'Pending', active: 'May 19, 2025 08:50 AM', avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=100' },
-];
+const usersList = [];
 
 const permissionsData = [
   { resource: 'Dashboard Access', view: true, create: true, edit: true, delete: true },
@@ -29,13 +21,7 @@ const permissionsData = [
   { resource: 'Settings Management', view: true, create: true, edit: true, delete: true },
 ];
 
-const activityLogs = [
-  { action: 'User Login', desc: 'Admin User logged in', time: 'May 23, 2025 08:30 AM', type: 'login' },
-  { action: 'Password Reset', desc: 'Password reset for Health Officer', time: 'May 23, 2025 07:45 AM', type: 'reset' },
-  { action: 'Permission Updated', desc: 'Updated permissions for Data Analyst', time: 'May 22, 2025 10:15 PM', type: 'update' },
-  { action: 'New User Created', desc: 'New user Field Officer was added', time: 'May 22, 2025 06:20 PM', type: 'create' },
-  { action: 'User Login', desc: 'Regional Manager logged in', time: 'May 22, 2025 04:10 PM', type: 'login' },
-];
+const activityLogs = [];
 
 export const Users = () => {
   const [searchVal, setSearchVal] = useState('');
@@ -69,9 +55,9 @@ export const Users = () => {
           </div>
           <div className="us-metric-body">
             <span className="us-metric-label">Total Users</span>
-            <span className="us-metric-val">28</span>
-            <span className="us-metric-sub positive">
-              <TrendingUp size={12} /> 18% vs last 30 days
+            <span className="us-metric-val">0</span>
+            <span className="us-metric-sub neutral">
+              —
             </span>
           </div>
         </div>
@@ -82,9 +68,9 @@ export const Users = () => {
           </div>
           <div className="us-metric-body">
             <span className="us-metric-label">Active Users</span>
-            <span className="us-metric-val">24</span>
-            <span className="us-metric-sub positive">
-              <TrendingUp size={12} /> 16% vs last 30 days
+            <span className="us-metric-val">0</span>
+            <span className="us-metric-sub neutral">
+              —
             </span>
           </div>
         </div>
@@ -95,9 +81,9 @@ export const Users = () => {
           </div>
           <div className="us-metric-body">
             <span className="us-metric-label">Pending Invites</span>
-            <span className="us-metric-val">3</span>
-            <span className="us-metric-sub positive">
-              <TrendingUp size={12} /> 50% vs last 30 days
+            <span className="us-metric-val">0</span>
+            <span className="us-metric-sub neutral">
+              —
             </span>
           </div>
         </div>
@@ -108,8 +94,8 @@ export const Users = () => {
           </div>
           <div className="us-metric-body">
             <span className="us-metric-label">Admin Accounts</span>
-            <span className="us-metric-val">5</span>
-            <span className="us-metric-sub neutral">No change</span>
+            <span className="us-metric-val">0</span>
+            <span className="us-metric-sub neutral">—</span>
           </div>
         </div>
       </div>
@@ -211,7 +197,7 @@ export const Users = () => {
                   </tr>
                 )) : (
                   <tr>
-                    <td colSpan="7" style={{ textAlign: 'center', padding: '2rem' }}>No users match the given filters.</td>
+                    <td colSpan="7" style={{ textAlign: 'center', padding: '2rem' }}>No users found.</td>
                   </tr>
                 )}
               </tbody>
@@ -222,10 +208,6 @@ export const Users = () => {
             <span className="pag-count-info">Showing {filteredUsers.length > 0 ? 1 : 0} to {filteredUsers.length} of {usersList.length} users</span>
             <div className="pag-nav-group">
               <button className="nav-pag-btn" disabled><ChevronLeft size={16} /></button>
-              <button className="nav-pag-btn active">1</button>
-              <button className="nav-pag-btn">2</button>
-              <button className="nav-pag-btn">3</button>
-              <button className="nav-pag-btn">4</button>
               <button className="nav-pag-btn"><ChevronRight size={16} /></button>
             </div>
           </div>
@@ -285,7 +267,7 @@ export const Users = () => {
               <a href="#" className="act-view-all-link">View all logs →</a>
             </div>
             <div className="activity-list">
-              {activityLogs.map((log, idx) => (
+              {activityLogs.length > 0 ? activityLogs.map((log, idx) => (
                 <div className="activity-item-row" key={idx}>
                   <div className="activity-icon-container">
                     {log.type === 'login' && (
@@ -307,7 +289,11 @@ export const Users = () => {
                   </div>
                   <span className="activity-time-lbl">{log.time}</span>
                 </div>
-              ))}
+              )) : (
+                <div style={{ padding: '2rem', textAlign: 'center', color: 'var(--color-text-muted)' }}>
+                  No recent activity.
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -9,16 +9,10 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import './Dashboard.css';
 import { CustomDropdown } from '../../components/common/CustomDropdown';
 import { VoltaRiskMap } from '../../components/VoltaRiskMap/VoltaRiskMap';
+import { lastNDayLabels, fmtDateTime, hoursAgo, nowDateTime } from '../../utils/dateUtils';
 
-const outbreakData = [
-  { name: 'May 17', cases: 35 },
-  { name: 'May 18', cases: 52 },
-  { name: 'May 19', cases: 48 },
-  { name: 'May 20', cases: 85 },
-  { name: 'May 21', cases: 72 },
-  { name: 'May 22', cases: 68 },
-  { name: 'May 23', cases: 100 },
-];
+const dayLabels = lastNDayLabels(7);
+const outbreakData = [];
 
 export const Dashboard = () => {
   const navigate = useNavigate();
@@ -54,8 +48,8 @@ export const Dashboard = () => {
           <div className="metric-content">
             <span className="metric-label">Total Predictions</span>
             <div className="metric-value-row">
-              <span className="metric-value">248</span>
-              <span className="metric-trend up">↑ 18.6% vs last 7 days</span>
+              <span className="metric-value">0</span>
+              <span className="metric-trend neutral">—</span>
             </div>
           </div>
         </div>
@@ -67,8 +61,8 @@ export const Dashboard = () => {
           <div className="metric-content">
             <span className="metric-label">High Risk Areas</span>
             <div className="metric-value-row">
-              <span className="metric-value">5</span>
-              <span className="metric-trend down">↑ 2 vs last 7 days</span>
+              <span className="metric-value">0</span>
+              <span className="metric-trend neutral">—</span>
             </div>
           </div>
         </div>
@@ -80,8 +74,8 @@ export const Dashboard = () => {
           <div className="metric-content">
             <span className="metric-label">Alerts Sent</span>
             <div className="metric-value-row">
-              <span className="metric-value">96</span>
-              <span className="metric-trend up" style={{color: '#10B981'}}>↑ 21.3% vs last 7 days</span>
+              <span className="metric-value">0</span>
+              <span className="metric-trend neutral">—</span>
             </div>
           </div>
         </div>
@@ -93,8 +87,8 @@ export const Dashboard = () => {
           <div className="metric-content">
             <span className="metric-label">Recipients Reached</span>
             <div className="metric-value-row">
-              <span className="metric-value">12,450</span>
-              <span className="metric-trend up" style={{color: '#10B981'}}>↑ 16.8% vs last 7 days</span>
+              <span className="metric-value">0</span>
+              <span className="metric-trend neutral">—</span>
             </div>
           </div>
         </div>
@@ -106,8 +100,8 @@ export const Dashboard = () => {
           <div className="metric-content">
             <span className="metric-label">Active Outbreaks</span>
             <div className="metric-value-row">
-              <span className="metric-value">3</span>
-              <span className="metric-trend neutral">Across the region</span>
+              <span className="metric-value">0</span>
+              <span className="metric-trend neutral">—</span>
             </div>
           </div>
         </div>
@@ -119,8 +113,8 @@ export const Dashboard = () => {
           <div className="metric-content">
             <span className="metric-label">Prediction Accuracy</span>
             <div className="metric-value-row">
-              <span className="metric-value">87.4%</span>
-              <span className="metric-trend up">↑ 6.2% vs last 30 days</span>
+              <span className="metric-value">0%</span>
+              <span className="metric-trend neutral">—</span>
             </div>
           </div>
         </div>
@@ -210,28 +204,10 @@ export const Dashboard = () => {
               <h3><Sparkles size={18} className="ai-stars" /> AI Recommendations</h3>
               <a href="#" className="link">View all →</a>
             </div>
-            <div className="card-body" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-              <div className="ai-alert-box">
-                <div style={{display: 'flex', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '0.5rem'}}>
-                  <ShieldCheck size={18} color="#10B981" style={{marginTop: '2px'}}/>
-                  <div>
-                    <h4>High Malaria Risk in Kpando Municipal</h4>
-                    <p>Increased rainfall and humidity levels favor mosquito breeding in low-lying communities.</p>
-                  </div>
-                </div>
-              </div>
-              <div className="ai-actions" style={{ flex: 1 }}>
-                <h5>Recommended Actions</h5>
-                <ul>
-                  <li><CheckCircle2 size={16} className="check-icon" /> Intensify indoor residual spraying in Kpando, Hohoe and Ho Municipal</li>
-                  <li><CheckCircle2 size={16} className="check-icon" /> Distribute mosquito nets to vulnerable households</li>
-                  <li><CheckCircle2 size={16} className="check-icon" /> Community sensitization on malaria prevention</li>
-                  <li><CheckCircle2 size={16} className="check-icon" /> Clear stagnant water in communities</li>
-                </ul>
-              </div>
-              <div style={{ marginTop: 'auto', textAlign: 'center' }}>
-                <button className="btn-text" style={{color: '#10B981'}}>View Full Recommendation →</button>
-              </div>
+            <div className="card-body" style={{ display: 'flex', flexDirection: 'column', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.85rem', fontStyle: 'italic', padding: '2rem 0' }}>
+                No active recommendations.
+              </p>
             </div>
           </div>
 
@@ -241,39 +217,10 @@ export const Dashboard = () => {
               <h3>Recent Alerts</h3>
               <a href="#" className="link">View all →</a>
             </div>
-            <div className="alert-list">
-              <div className="alert-item">
-                <div className="alert-icon" style={{color: '#EF4444', background: '#FEF2F2'}}><AlertTriangle size={16}/></div>
-                <div className="alert-info">
-                  <h4>High Malaria Risk - Kpando Municipal</h4>
-                  <span>May 23, 2025 08:15 AM</span>
-                </div>
-                <span className="badge badge-danger">High</span>
-              </div>
-              <div className="alert-item">
-                <div className="alert-icon" style={{color: '#F97316', background: '#FFF7ED'}}><Bug size={16}/></div>
-                <div className="alert-info">
-                  <h4>Dengue Fever Risk - Ho Municipal</h4>
-                  <span>May 23, 2025 07:45 AM</span>
-                </div>
-                <span className="badge badge-warning" style={{backgroundColor: '#FFF7ED', color: '#F97316'}}>Moderate</span>
-              </div>
-              <div className="alert-item">
-                <div className="alert-icon" style={{color: '#F97316', background: '#FFF7ED'}}><Bug size={16}/></div>
-                <div className="alert-info">
-                  <h4>Malaria Risk - Akatsi South</h4>
-                  <span>May 23, 2025 07:30 AM</span>
-                </div>
-                <span className="badge badge-warning" style={{backgroundColor: '#FFF7ED', color: '#F97316'}}>Moderate</span>
-              </div>
-              <div className="alert-item">
-                <div className="alert-icon" style={{color: '#10B981', background: '#ECFDF5'}}><Bug size={16}/></div>
-                <div className="alert-info">
-                  <h4>Cholera Risk - Ketu South</h4>
-                  <span>May 23, 2025 06:50 AM</span>
-                </div>
-                <span className="badge badge-success" style={{backgroundColor: '#ECFDF5', color: '#10B981'}}>Low</span>
-              </div>
+            <div className="alert-list" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '150px' }}>
+              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.85rem', fontStyle: 'italic' }}>
+                No recent alerts.
+              </p>
             </div>
             <div className="card-footer center" style={{borderTop: 'none', paddingBottom: '1.5rem'}}>
               <button className="btn-text" style={{color: '#2563EB'}} onClick={() => navigate('/alerts')}>Go to Alerts & Messages →</button>

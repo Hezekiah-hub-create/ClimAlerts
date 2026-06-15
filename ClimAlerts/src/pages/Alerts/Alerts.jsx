@@ -13,26 +13,14 @@ import {
 } from 'recharts';
 import './Alerts.css';
 import { CustomDropdown } from '../../components/common/CustomDropdown';
+import { lastNDayLabels, fmtDateTime, hoursAgo, daysAgo, dateRange } from '../../utils/dateUtils';
 
 // ---------- Mock Data ----------
 
-const alertsSentOverTime = [
-  { date: 'May 16', count: 100 },
-  { date: 'May 17', count: 210 },
-  { date: 'May 18', count: 230 },
-  { date: 'May 19', count: 180 },
-  { date: 'May 20', count: 260 },
-  { date: 'May 21', count: 280 },
-  { date: 'May 22', count: 320 },
-  { date: 'May 23', count: 390 },
-];
+const _dayLabels = lastNDayLabels(8);
+const alertsSentOverTime = [];
 
-const alertDistribution = [
-  { name: 'Disease Alerts', value: 42, color: '#3B82F6' },
-  { name: 'Weather Alerts', value: 28, color: '#10B981' },
-  { name: 'Health Advisories', value: 18, color: '#F59E0B' },
-  { name: 'System Notifications', value: 12, color: '#8B5CF6' },
-];
+const alertDistribution = [];
 
 const alertTemplates = [
   { id: 1, title: 'Malaria Outbreak Alert', desc: 'High risk of malaria outbreak detected...' },
@@ -42,19 +30,9 @@ const alertTemplates = [
   { id: 5, title: 'Heavy Rainfall Warning', desc: 'Heavy rainfall expected in region...' },
 ];
 
-const scheduledAlerts = [
-  { name: 'Malaria Prevention Reminder', date: 'May 24, 2025 08:00 AM', group: 'Health Officials', status: 'Scheduled' },
-  { name: 'Rainfall Advisory', date: 'May 24, 2025 06:00 PM', group: 'Farmers', status: 'Scheduled' },
-  { name: 'Weekly Health Bulletin', date: 'May 25, 2025 09:00 AM', group: 'General Public', status: 'Scheduled' },
-];
+const scheduledAlerts = [];
 
-const alertHistory = [
-  { id: 'ALT-1250', msg: 'High malaria outbreak risk detected...', recipients: '2,450', region: 'Volta Region', rate: '98%', status: 'Sent', date: 'May 23, 2025 10:30 AM', color: '#10B981' },
-  { id: 'ALT-1249', msg: 'Heavy rainfall expected. Take necessary...', recipients: '4,120', region: 'Northern Region', rate: '95%', status: 'Sent', date: 'May 23, 2025 09:15 AM', color: '#10B981' },
-  { id: 'ALT-1248', msg: 'Cholera risk rising in coastal areas. Boil...', recipients: '6,230', region: 'Central Region', rate: '97%', status: 'Sent', date: 'May 22, 2025 08:45 PM', color: '#10B981' },
-  { id: 'ALT-1247', msg: 'Weekly health advisory and updates.', recipients: '1,850', region: 'Ashanti Region', rate: '—', status: 'Pending', date: 'May 22, 2025 09:00 AM', color: '#F59E0B' },
-  { id: 'ALT-1246', msg: 'Dengue fever cases on the rise. Stay...', recipients: '5,100', region: 'Greater Accra', rate: '62%', status: 'Failed', date: 'May 21, 2025 07:30 PM', color: '#EF4444' },
-];
+const alertHistory = [];
 
 export const Alerts = () => {
   const [alertType, setAlertType] = useState('Emergency');
@@ -128,9 +106,9 @@ export const Alerts = () => {
           </div>
           <div className="alert-m-body">
             <span className="alert-m-label">Total Alerts Sent</span>
-            <span className="alert-m-value">1,248</span>
-            <span className="alert-m-trend positive">
-              <TrendingUp size={12} /> 18% this month
+            <span className="alert-m-value">0</span>
+            <span className="alert-m-trend neutral">
+              —
             </span>
           </div>
         </div>
@@ -141,8 +119,8 @@ export const Alerts = () => {
           </div>
           <div className="alert-m-body">
             <span className="alert-m-label">Successful Deliveries</span>
-            <span className="alert-m-value">982</span>
-            <span className="alert-m-trend positive">78.7% delivery rate</span>
+            <span className="alert-m-value">0</span>
+            <span className="alert-m-trend neutral">—</span>
           </div>
         </div>
 
@@ -152,8 +130,8 @@ export const Alerts = () => {
           </div>
           <div className="alert-m-body">
             <span className="alert-m-label">Failed Messages</span>
-            <span className="alert-m-value">82</span>
-            <span className="alert-m-trend negative">6.6% failure rate</span>
+            <span className="alert-m-value">0</span>
+            <span className="alert-m-trend neutral">—</span>
           </div>
         </div>
 
@@ -163,8 +141,8 @@ export const Alerts = () => {
           </div>
           <div className="alert-m-body">
             <span className="alert-m-label">Total Recipients</span>
-            <span className="alert-m-value">24,685</span>
-            <span className="alert-m-trend neutral">Across 5 Groups</span>
+            <span className="alert-m-value">0</span>
+            <span className="alert-m-trend neutral">—</span>
           </div>
         </div>
       </div>
@@ -266,7 +244,7 @@ export const Alerts = () => {
                 <AlertTriangle size={18} className="warn-icon" />
                 <div className="banner-info">
                   <h4>High Malaria Outbreak Risk Detected</h4>
-                  <p>Volta Region • Prediction Window: May 23 - Jun 6, 2025</p>
+                  <p>Volta Region • Prediction Window: {dateRange(14)}</p>
                 </div>
               </div>
               <span className="confidence-badge-red">87% Confidence</span>
@@ -362,7 +340,7 @@ export const Alerts = () => {
                 </tr>
               </thead>
               <tbody>
-                {scheduledAlerts.map((row, idx) => (
+                {scheduledAlerts.length > 0 ? scheduledAlerts.map((row, idx) => (
                   <tr key={idx}>
                     <td className="sched-name-cell">{row.name}</td>
                     <td className="sched-date-cell">{row.date}</td>
@@ -374,7 +352,13 @@ export const Alerts = () => {
                       <button className="tbl-actions-dot"><MoreVertical size={14} /></button>
                     </td>
                   </tr>
-                ))}
+                )) : (
+                  <tr>
+                    <td colSpan="5" style={{ textAlign: 'center', padding: '2rem', color: 'var(--color-text-muted)' }}>
+                      No scheduled alerts.
+                    </td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>
@@ -416,7 +400,7 @@ export const Alerts = () => {
                 </tr>
               </thead>
               <tbody>
-                {filteredHistory.map((row, idx) => (
+                {filteredHistory.length > 0 ? filteredHistory.map((row, idx) => (
                   <tr key={idx}>
                     <td className="hist-id-cell">{row.id}</td>
                     <td className="hist-msg-cell">{row.msg}</td>
@@ -444,19 +428,20 @@ export const Alerts = () => {
                     </td>
                     <td className="hist-date-cell">{row.date}</td>
                   </tr>
-                ))}
+                )) : (
+                  <tr>
+                    <td colSpan="7" style={{ textAlign: 'center', padding: '2rem', color: 'var(--color-text-muted)' }}>
+                      No alerts found.
+                    </td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>
           <div className="history-card-footer">
-            <span className="pagination-info">Showing 1 to 5 of 28 alerts</span>
+            <span className="pagination-info">Showing 0 to 0 of 0 alerts</span>
             <div className="pagination-controls">
               <button className="pag-btn" disabled><ChevronLeft size={16} /></button>
-              <button className="pag-btn active">1</button>
-              <button className="pag-btn">2</button>
-              <button className="pag-btn">3</button>
-              <button className="pag-btn">4</button>
-              <button className="pag-btn">5</button>
               <button className="pag-btn"><ChevronRight size={16} /></button>
             </div>
           </div>
@@ -473,26 +458,26 @@ export const Alerts = () => {
           <div className="sms-stats-subgrid">
             <div className="sms-stat-box">
               <span className="sms-stat-lbl">Delivery Rate</span>
-              <span className="sms-stat-val">93.4%</span>
-              <span className="sms-stat-subgreen">↑ 5.2%</span>
+              <span className="sms-stat-val">0%</span>
+              <span className="sms-stat-subneutral">—</span>
             </div>
 
             <div className="sms-stat-box">
               <span className="sms-stat-lbl">Avg. Response Time</span>
-              <span className="sms-stat-val">3.6s</span>
-              <span className="sms-stat-subgreen">↓ 1.1s</span>
+              <span className="sms-stat-val">0s</span>
+              <span className="sms-stat-subneutral">—</span>
             </div>
 
             <div className="sms-stat-box">
               <span className="sms-stat-lbl">Total SMS Sent</span>
-              <span className="sms-stat-val">1,248</span>
-              <span className="sms-stat-subgreen">↑ 12.6%</span>
+              <span className="sms-stat-val">0</span>
+              <span className="sms-stat-subneutral">—</span>
             </div>
 
             <div className="sms-stat-box">
               <span className="sms-stat-lbl">Total SMS Cost</span>
-              <span className="sms-stat-val" style={{ fontSize: '1rem' }}>GHS 1,245.30</span>
-              <span className="sms-stat-subgreen">↑ 8.4%</span>
+              <span className="sms-stat-val" style={{ fontSize: '1rem' }}>GHS 0.00</span>
+              <span className="sms-stat-subneutral">—</span>
             </div>
           </div>
 

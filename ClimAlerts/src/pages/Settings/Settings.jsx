@@ -16,6 +16,7 @@ import {
 import { Bug, Droplet, Thermometer, Waves, Siren, CloudRain, Calendar, Bot, BarChart, Puzzle, Sparkles } from 'lucide-react';
 import './Settings.css';
 import { CustomDropdown } from '../../components/common/CustomDropdown';
+import { fmtDateTime, fmtDateShort, fmtDate, hoursAgo, daysAgo, nowDateTime, nowDate, lastNDayLabels } from '../../utils/dateUtils';
 
 // ---------- Mock Data ----------
 
@@ -36,15 +37,16 @@ export const Settings = () => {
   const [isSaving, setIsSaving] = useState(false);
 
   
+  const _simLabels = lastNDayLabels(8);
   const [simData, setSimData] = useState([
-    { name: 'May 17', historical: 35, current: 35, high: 35, low: 35 },
-    { name: 'May 20', historical: 42, current: 42, high: 42, low: 42 },
-    { name: 'May 23', historical: 50, current: 52, high: 62, low: 45 },
-    { name: 'May 26', current: 68, high: 88, low: 52 },
-    { name: 'May 29', current: 72, high: 91, low: 58 },
-    { name: 'Jun 1', current: 75, high: 94, low: 62 },
-    { name: 'Jun 4', current: 72, high: 92, low: 55 },
-    { name: 'Jun 7', current: 69, high: 89, low: 50 },
+    { name: _simLabels[0], historical: 35, current: 35, high: 35, low: 35 },
+    { name: _simLabels[1], historical: 42, current: 42, high: 42, low: 42 },
+    { name: _simLabels[2], historical: 50, current: 52, high: 62, low: 45 },
+    { name: _simLabels[3], current: 68, high: 88, low: 52 },
+    { name: _simLabels[4], current: 72, high: 91, low: 58 },
+    { name: _simLabels[5], current: 75, high: 94, low: 62 },
+    { name: _simLabels[6], current: 72, high: 92, low: 55 },
+    { name: _simLabels[7], current: 69, high: 89, low: 50 },
   ]);
 
   const [isSimulating, setIsSimulating] = useState(false);
@@ -90,8 +92,49 @@ export const Settings = () => {
   // Tab State Handlers
   const [showSid, setShowSid] = useState(false);
   const [showToken, setShowToken] = useState(false);
-  const [selectedProvider, setSelectedProvider] = useState('Twilio');
-  const [smsStatus, setSmsStatus] = useState('Connected');
+  
+  // Tab 1: SMS & API States
+  const [smsConfig, setSmsConfig] = useState({
+    provider: '',
+    sid: '',
+    token: '',
+    fromNumber: ''
+  });
+
+  const [apiConfig, setApiConfig] = useState({
+    weatherKey: '',
+    diseaseKey: '',
+    baseUrl: '',
+    status: 'Pending'
+  });
+
+  const [systemConfig, setSystemConfig] = useState({
+    dataRetention: '',
+    timeRange: '',
+    dataCompression: false,
+    autoDataSync: false,
+    backupFreq: '',
+    language: '',
+    defaultRisk: '',
+    maxAlertRecipients: 0,
+    sessionTimeout: ''
+  });
+
+  const [isTestingSms, setIsTestingSms] = useState(false);
+  const [smsLastTest, setSmsLastTest] = useState('Never');
+  const [smsStatus, setSmsStatus] = useState('Pending');
+
+  const handleTestSms = () => {
+    setIsTestingSms(true);
+    setSmsStatus('Testing...');
+    const loadingId = toast.loading('Testing SMS Gateway connection...');
+    setTimeout(() => {
+      setIsTestingSms(false);
+      setSmsLastTest(nowDateTime());
+      setSmsStatus('Connected');
+      toast.success('SMS Gateway connection successful!', { id: loadingId });
+    }, 1500);
+  };
 
   return (
     <div className="settings-page-container">
@@ -127,8 +170,8 @@ export const Settings = () => {
                 <div className="input-group-field">
                   <label>SMS Provider</label>
                   <CustomDropdown
-                    value={selectedProvider}
-                    onChange={setSelectedProvider}
+                    value={smsConfig.provider}
+                    onChange={(val) => setSmsConfig({ ...smsConfig, provider: val })}
                     className="sett-input custom-dropdown"
                     options={[
                     { value: 'Twilio', label: 'Twilio' },
@@ -140,30 +183,48 @@ export const Settings = () => {
                 <div className="input-group-field password-wrapper">
                   <label>Account SID</label>
                   <div className="input-with-action">
-                    <input type={showSid ? 'text' : 'password'} defaultValue="AC88390b1787c88df3" className="sett-input" />
+                    <input 
+                      type={showSid ? 'text' : 'password'} 
+                      value={smsConfig.sid} 
+                      onChange={e => setSmsConfig({ ...smsConfig, sid: e.target.value })}
+                      className="sett-input" 
+                    />
                     <button className="eye-btn" onClick={() => setShowSid(!showSid)}><Eye size={14} /></button>
                   </div>
                 </div>
                 <div className="input-group-field password-wrapper">
                   <label>Auth Token</label>
                   <div className="input-with-action">
-                    <input type={showToken ? 'text' : 'password'} defaultValue="bf893c87e9c8a9fbc761e" className="sett-input" />
+                    <input 
+                      type={showToken ? 'text' : 'password'} 
+                      value={smsConfig.token} 
+                      onChange={e => setSmsConfig({ ...smsConfig, token: e.target.value })}
+                      className="sett-input" 
+                    />
                     <button className="eye-btn" onClick={() => setShowToken(!showToken)}><Eye size={14} /></button>
                   </div>
                 </div>
                 <div className="input-group-field">
                   <label>From Number</label>
-                  <input type="text" defaultValue="+233 20 123 4567" className="sett-input" />
+                  <input 
+                    type="text" 
+                    value={smsConfig.fromNumber} 
+                    onChange={e => setSmsConfig({ ...smsConfig, fromNumber: e.target.value })}
+                    className="sett-input" 
+                  />
                 </div>
               </div>
 
               <div className="sec-footer-actions-row">
                 <div className="sms-status-group">
                   <span className="footer-status-label">SMS Status</span>
-                  <span className="badge-green-filled">Connected</span>
-                  <span className="footer-last-test">Last Test: May 23, 2025 08:25 AM</span>
+                  <span className={smsStatus === 'Connected' ? 'badge-green-filled' : 'badge-yellow-filled'}>{smsStatus}</span>
+                  <span className="footer-last-test">Last Test: {smsLastTest}</span>
                 </div>
-                <button className="btn-sett-outline"><RefreshCw size={14} /> Test Connection</button>
+                <button className="btn-sett-outline" onClick={handleTestSms} disabled={isTestingSms}>
+                  <RefreshCw size={14} className={isTestingSms ? "spin-icon" : ""} /> 
+                  {isTestingSms ? 'Testing...' : 'Test Connection'}
+                </button>
               </div>
             </div>
 
@@ -177,26 +238,41 @@ export const Settings = () => {
                 <div className="input-group-field password-wrapper">
                   <label>Weather API Key</label>
                   <div className="input-with-action">
-                    <input type="password" defaultValue="weatherkey88939c" className="sett-input" />
+                    <input 
+                      type="password" 
+                      value={apiConfig.weatherKey} 
+                      onChange={e => setApiConfig({ ...apiConfig, weatherKey: e.target.value })}
+                      className="sett-input" 
+                    />
                     <button className="eye-btn"><Eye size={14} /></button>
                   </div>
                 </div>
                 <div className="input-group-field password-wrapper">
                   <label>Disease Data API Key</label>
                   <div className="input-with-action">
-                    <input type="password" defaultValue="diseasekey773cbb" className="sett-input" />
+                    <input 
+                      type="password" 
+                      value={apiConfig.diseaseKey} 
+                      onChange={e => setApiConfig({ ...apiConfig, diseaseKey: e.target.value })}
+                      className="sett-input" 
+                    />
                     <button className="eye-btn"><Eye size={14} /></button>
                   </div>
                 </div>
                 <div className="input-group-field span-two-cols">
                   <label>Base API URL</label>
-                  <input type="text" defaultValue="https://api.climalerts.org/v1" className="sett-input" />
+                  <input 
+                    type="text" 
+                    value={apiConfig.baseUrl} 
+                    onChange={e => setApiConfig({ ...apiConfig, baseUrl: e.target.value })}
+                    className="sett-input" 
+                  />
                 </div>
               </div>
               <div className="sec-footer-actions-row">
                 <div className="sms-status-group">
                   <span className="footer-status-label">API Status</span>
-                  <span className="badge-green-filled">Active</span>
+                  <span className="badge-green-filled">{apiConfig.status}</span>
                 </div>
               </div>
             </div>
@@ -211,8 +287,8 @@ export const Settings = () => {
                 <div className="input-group-field">
                   <label>Data Retention Period</label>
                   <CustomDropdown
-                    value={'2 Years'}
-                    onChange={() => {}}
+                    value={systemConfig.dataRetention}
+                    onChange={(val) => setSystemConfig({ ...systemConfig, dataRetention: val })}
                     className="sett-input custom-dropdown"
                     options={[
                     { value: '2 Years', label: '2 Years' },
@@ -224,8 +300,8 @@ export const Settings = () => {
                 <div className="input-group-field">
                   <label>Default Time Range</label>
                   <CustomDropdown
-                    value={'7 Days'}
-                    onChange={() => {}}
+                    value={systemConfig.timeRange}
+                    onChange={(val) => setSystemConfig({ ...systemConfig, timeRange: val })}
                     className="sett-input custom-dropdown"
                     options={[
                     { value: '7 Days', label: '7 Days' },
@@ -240,7 +316,11 @@ export const Settings = () => {
                     <span>Compress database logs to save storage</span>
                   </div>
                   <label className="sett-toggle-switch">
-                    <input type="checkbox" defaultChecked />
+                    <input 
+                      type="checkbox" 
+                      checked={systemConfig.dataCompression} 
+                      onChange={e => setSystemConfig({ ...systemConfig, dataCompression: e.target.checked })} 
+                    />
                     <span className="sett-slider"></span>
                   </label>
                 </div>
@@ -250,15 +330,19 @@ export const Settings = () => {
                     <span>Automatically pull details from active nodes</span>
                   </div>
                   <label className="sett-toggle-switch">
-                    <input type="checkbox" defaultChecked />
+                    <input 
+                      type="checkbox" 
+                      checked={systemConfig.autoDataSync} 
+                      onChange={e => setSystemConfig({ ...systemConfig, autoDataSync: e.target.checked })} 
+                    />
                     <span className="sett-slider"></span>
                   </label>
                 </div>
                 <div className="input-group-field">
                   <label>Backup Frequency</label>
                   <CustomDropdown
-                    value={'Daily'}
-                    onChange={() => {}}
+                    value={systemConfig.backupFreq}
+                    onChange={(val) => setSystemConfig({ ...systemConfig, backupFreq: val })}
                     className="sett-input custom-dropdown"
                     options={[
                     { value: 'Daily', label: 'Daily' },
@@ -270,8 +354,8 @@ export const Settings = () => {
                 <div className="input-group-field">
                   <label>System Language</label>
                   <CustomDropdown
-                    value={'English'}
-                    onChange={() => {}}
+                    value={systemConfig.language}
+                    onChange={(val) => setSystemConfig({ ...systemConfig, language: val })}
                     className="sett-input custom-dropdown"
                     options={[
                     { value: 'English', label: 'English' },
@@ -293,8 +377,8 @@ export const Settings = () => {
                 <div className="input-group-field">
                   <label>Default Risk Level</label>
                   <CustomDropdown
-                    value={'Moderate'}
-                    onChange={() => {}}
+                    value={systemConfig.defaultRisk}
+                    onChange={(val) => setSystemConfig({ ...systemConfig, defaultRisk: val })}
                     className="sett-input custom-dropdown"
                     options={[
                     { value: 'Moderate', label: 'Moderate' },
@@ -305,13 +389,18 @@ export const Settings = () => {
                 </div>
                 <div className="input-group-field">
                   <label>Max Alert Recipients</label>
-                  <input type="number" defaultValue={1000} className="sett-input" />
+                  <input 
+                    type="number" 
+                    value={systemConfig.maxAlertRecipients} 
+                    onChange={e => setSystemConfig({ ...systemConfig, maxAlertRecipients: parseInt(e.target.value) || 0 })}
+                    className="sett-input" 
+                  />
                 </div>
                 <div className="input-group-field">
                   <label>Session Timeout</label>
                   <CustomDropdown
-                    value={'30 Minutes'}
-                    onChange={() => {}}
+                    value={systemConfig.sessionTimeout}
+                    onChange={(val) => setSystemConfig({ ...systemConfig, sessionTimeout: val })}
                     className="sett-input custom-dropdown"
                     options={[
                     { value: '30 Minutes', label: '30 Minutes' },
@@ -518,7 +607,7 @@ export const Settings = () => {
                     </div>
                   </div>
 
-                  <span className="last-updated-tag">Last updated: May 23, 2025 08:30 AM ↻</span>
+                  <span className="last-updated-tag">Last updated: {nowDateTime()} ↻</span>
                 </div>
               </div>
 
@@ -557,7 +646,7 @@ export const Settings = () => {
                   <div className="backup-meta-list">
                     <div className="meta-row">
                       <span>Last Backup Created:</span>
-                      <strong>May 23, 2025 06:15 AM</strong>
+                      <strong>{fmtDateTime(hoursAgo(4))}</strong>
                     </div>
                     <div className="meta-row">
                       <span>Automatic Backup status:</span>

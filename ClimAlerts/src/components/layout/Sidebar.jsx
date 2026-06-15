@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { 
   LayoutDashboard, 
@@ -13,6 +13,7 @@ import {
   ChevronRight,
   LogOut
 } from 'lucide-react';
+import { fmtDateTime, minutesAgo } from '../../utils/dateUtils';
 import './Sidebar.css';
 
 const navItems = [
@@ -27,6 +28,16 @@ const navItems = [
 ];
 
 export const Sidebar = () => {
+  const [now, setNow] = useState(new Date());
+
+  useEffect(() => {
+    const id = setInterval(() => setNow(new Date()), 60_000);
+    return () => clearInterval(id);
+  }, []);
+
+  const lastPrediction = fmtDateTime(minutesAgo(35));
+  const currentYear = now.getFullYear();
+
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
@@ -72,7 +83,7 @@ export const Sidebar = () => {
 
           <div className="status-row">
             <span className="status-label">Last Prediction Update</span>
-            <span className="status-value">May 23, 2025 08:30 AM</span>
+            <span className="status-value">{lastPrediction}</span>
           </div>
 
           <div className="status-row">
@@ -87,7 +98,7 @@ export const Sidebar = () => {
         </div>
 
         <div className="sidebar-footer">
-          <div className="copyright">© 2025 ClimAlerts<br/>All rights reserved.</div>
+          <div className="copyright">© {currentYear} ClimAlerts<br/>All rights reserved.</div>
           <div style={{ display: 'flex', gap: '8px' }}>
             <button className="collapse-btn" title="Logout" onClick={() => window.location.href = '/login'}>
               <LogOut size={16} />

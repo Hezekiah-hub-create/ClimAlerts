@@ -7,37 +7,17 @@ import {
   Server, FileText, Wifi
 } from 'lucide-react';
 import './DataSources.css';
+import { fmtDateTime, fmtDate, hoursAgo, nowDate } from '../../utils/dateUtils';
 
 // ---------- MOCK DATA ----------
 
-const syncLogs = [
-  { file: 'malaria_cases_volta_region.csv', type: 'CSV Upload', records: '12,456 records', date: 'May 23, 2025 08:30 AM', status: 'success' },
-  { file: 'weather_data_ghana.csv', type: 'CSV Upload', records: '45,782 records', date: 'May 23, 2025 07:45 AM', status: 'success' },
-  { file: 'health_facilities.json', type: 'API Sync', records: '1,247 records', date: 'May 23, 2025 06:30 AM', status: 'success' },
-  { file: 'population_data.csv', type: 'CSV Upload', records: '8,684 records', date: 'May 23, 2025 05:15 AM', status: 'partial' },
-  { file: 'invalid_data_upload.csv', type: 'CSV Upload', records: '0 records', date: 'May 23, 2025 11:20 PM', status: 'failed' },
-];
+const syncLogs = [];
 
-const previewData = [
-  { date: 'May 23, 2025', region: 'Volta', district: 'Ho Municipal', cases: 124, deaths: 2, rainfall: 45.6, temp: 28.3, humidity: 82 },
-  { date: 'May 23, 2025', region: 'Volta', district: 'Keta', cases: 98, deaths: 1, rainfall: 32.1, temp: 27.8, humidity: 79 },
-  { date: 'May 23, 2025', region: 'Volta', district: 'Sogakope', cases: 76, deaths: 0, rainfall: 28.9, temp: 29.1, humidity: 85 },
-  { date: 'May 23, 2025', region: 'Volta', district: 'Afadzato South', cases: 64, deaths: 1, rainfall: 67.3, temp: 26.7, humidity: 88 },
-  { date: 'May 23, 2025', region: 'Volta', district: 'North Tongu', cases: 112, deaths: 2, rainfall: 52.4, temp: 27.2, humidity: 83 },
-];
+const previewData = [];
 
-const anomalies = [
-  { title: 'Abnormally high cases detected in Keta District', source: 'malaria_cases_volta_region.csv', date: 'May 23, 2025 08:15 AM', severity: 'high' },
-  { title: 'Missing rainfall data in 3 districts', source: 'weather_data_ghana.csv', date: 'May 23, 2025 07:30 AM', severity: 'medium' },
-  { title: 'Temperature spike detected in Afadzato South', source: 'weather_data_ghana.csv', date: 'May 23, 2025 06:45 AM', severity: 'low' },
-];
+const anomalies = [];
 
-const dataSources = [
-  { name: 'malaria_cases_volta_region.csv', type: 'CSV Upload', records: '12,456', lastSync: 'May 23, 2025', icon: FileSpreadsheet, color: '#10B981', bg: '#ECFDF5' },
-  { name: 'weather_data_ghana.csv', type: 'CSV Upload', records: '45,782', lastSync: 'May 23, 2025', icon: FileSpreadsheet, color: '#3B82F6', bg: '#EFF6FF' },
-  { name: 'health_facilities.json', type: 'API Sync', records: '1,247', lastSync: 'May 23, 2025', icon: Server, color: '#8B5CF6', bg: '#F5F3FF' },
-  { name: 'population_data.csv', type: 'CSV Upload', records: '8,684', lastSync: 'May 23, 2025', icon: FileText, color: '#F59E0B', bg: '#FFFBEB' },
-];
+const dataSources = [];
 
 // ---------- COMPONENT ----------
 
@@ -71,8 +51,8 @@ export const DataSources = () => {
           </div>
           <div className="ds-metric-body">
             <span className="ds-metric-label">Total Data Sources</span>
-            <span className="ds-metric-value">8</span>
-            <span className="ds-metric-sub success">2 Active</span>
+            <span className="ds-metric-value">0</span>
+            <span className="ds-metric-sub neutral">0 Active</span>
           </div>
         </div>
 
@@ -82,9 +62,9 @@ export const DataSources = () => {
           </div>
           <div className="ds-metric-body">
             <span className="ds-metric-label">Last Sync</span>
-            <span className="ds-metric-value" style={{ fontSize: '0.95rem' }}>May 23, 2025</span>
-            <span className="ds-metric-sub success">
-              <CheckCircle2 size={11} /> Completed successfully
+            <span className="ds-metric-value" style={{ fontSize: '0.95rem' }}>—</span>
+            <span className="ds-metric-sub neutral">
+              No recent sync
             </span>
           </div>
         </div>
@@ -95,7 +75,7 @@ export const DataSources = () => {
           </div>
           <div className="ds-metric-body">
             <span className="ds-metric-label">Total Records</span>
-            <span className="ds-metric-value">1,248,580</span>
+            <span className="ds-metric-value">0</span>
             <span className="ds-metric-sub neutral">Across all sources</span>
           </div>
         </div>
@@ -106,8 +86,8 @@ export const DataSources = () => {
           </div>
           <div className="ds-metric-body">
             <span className="ds-metric-label">Anomalies Detected</span>
-            <span className="ds-metric-value">23</span>
-            <span className="ds-metric-sub warning">Across 4 datasets</span>
+            <span className="ds-metric-value">0</span>
+            <span className="ds-metric-sub neutral">Across 0 datasets</span>
           </div>
         </div>
 
@@ -117,8 +97,8 @@ export const DataSources = () => {
           </div>
           <div className="ds-metric-body">
             <span className="ds-metric-label">Data Quality Score</span>
-            <span className="ds-metric-value">98.2%</span>
-            <span className="ds-metric-sub excellent">Excellent</span>
+            <span className="ds-metric-value">0%</span>
+            <span className="ds-metric-sub neutral">—</span>
           </div>
         </div>
       </div>
@@ -192,7 +172,7 @@ export const DataSources = () => {
 
               {activeTab === 'sources' && (
                 <div className="ds-sources-list">
-                  {dataSources.map((src, i) => (
+                  {dataSources.length > 0 ? dataSources.map((src, i) => (
                     <div className="ds-source-item" key={i}>
                       <div className="ds-source-icon" style={{ color: src.color, background: src.bg }}>
                         <src.icon size={18} />
@@ -213,7 +193,11 @@ export const DataSources = () => {
                         <ChevronRight size={16} color="#9CA3AF" />
                       </div>
                     </div>
-                  ))}
+                  )) : (
+                    <div style={{ padding: '2rem', textAlign: 'center', color: 'var(--color-text-muted)' }}>
+                      No data sources found.
+                    </div>
+                  )}
                 </div>
               )}
             </div>
@@ -260,7 +244,7 @@ export const DataSources = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {previewData.map((row, i) => (
+                  {previewData.length > 0 ? previewData.map((row, i) => (
                     <tr key={i}>
                       <td>{row.date}</td>
                       <td>{row.region}</td>
@@ -271,17 +255,13 @@ export const DataSources = () => {
                       <td>{row.temp}</td>
                       <td>{row.humidity}</td>
                     </tr>
-                  ))}
-                  <tr>
-                    <td className="ellipsis">···</td>
-                    <td className="ellipsis">···</td>
-                    <td className="ellipsis">···</td>
-                    <td className="ellipsis">···</td>
-                    <td className="ellipsis">···</td>
-                    <td className="ellipsis">···</td>
-                    <td className="ellipsis">···</td>
-                    <td className="ellipsis">···</td>
-                  </tr>
+                  )) : (
+                    <tr>
+                      <td colSpan="8" style={{ textAlign: 'center', padding: '2rem', color: 'var(--color-text-muted)' }}>
+                        No data available to preview.
+                      </td>
+                    </tr>
+                  )}
                 </tbody>
               </table>
             </div>
@@ -293,36 +273,36 @@ export const DataSources = () => {
                 <div className="ds-val-stat">
                   <span className="ds-val-stat-label">Total Rows</span>
                   <div className="ds-val-stat-row">
-                    <span className="ds-val-stat-value">12,456</span>
-                    <span className="ds-val-stat-pct muted">100%</span>
+                    <span className="ds-val-stat-value">0</span>
+                    <span className="ds-val-stat-pct muted">0%</span>
                   </div>
                 </div>
                 <div className="ds-val-stat">
                   <span className="ds-val-stat-label">Valid Rows</span>
                   <div className="ds-val-stat-row">
-                    <span className="ds-val-stat-value">12,233</span>
-                    <span className="ds-val-stat-pct green">98.2%</span>
+                    <span className="ds-val-stat-value">0</span>
+                    <span className="ds-val-stat-pct neutral">0%</span>
                   </div>
                 </div>
                 <div className="ds-val-stat">
                   <span className="ds-val-stat-label">Invalid Rows</span>
                   <div className="ds-val-stat-row">
-                    <span className="ds-val-stat-value">223</span>
-                    <span className="ds-val-stat-pct red">1.8%</span>
+                    <span className="ds-val-stat-value">0</span>
+                    <span className="ds-val-stat-pct neutral">0%</span>
                   </div>
                 </div>
                 <div className="ds-val-stat">
                   <span className="ds-val-stat-label">Missing Values</span>
                   <div className="ds-val-stat-row">
-                    <span className="ds-val-stat-value">456</span>
-                    <span className="ds-val-stat-pct yellow">3.7%</span>
+                    <span className="ds-val-stat-value">0</span>
+                    <span className="ds-val-stat-pct neutral">0%</span>
                   </div>
                 </div>
                 <div className="ds-val-stat">
                   <span className="ds-val-stat-label">Duplicates</span>
                   <div className="ds-val-stat-row">
-                    <span className="ds-val-stat-value">34</span>
-                    <span className="ds-val-stat-pct muted">0.3%</span>
+                    <span className="ds-val-stat-value">0</span>
+                    <span className="ds-val-stat-pct neutral">0%</span>
                   </div>
                 </div>
               </div>
@@ -353,7 +333,7 @@ export const DataSources = () => {
               <a href="#">View All Logs →</a>
             </div>
             <div className="ds-sync-list">
-              {syncLogs.map((log, i) => (
+              {syncLogs.length > 0 ? syncLogs.map((log, i) => (
                 <div className="ds-sync-item" key={i}>
                   <div className={`ds-sync-status-icon ${log.status}`}>
                     {log.status === 'success' && <CheckCircle2 size={18} />}
@@ -373,7 +353,11 @@ export const DataSources = () => {
                     </span>
                   </div>
                 </div>
-              ))}
+              )) : (
+                <div style={{ padding: '2rem', textAlign: 'center', color: 'var(--color-text-muted)' }}>
+                  No recent sync logs.
+                </div>
+              )}
             </div>
             <div className="ds-sync-footer">
               <a href="#">View All Sync Logs</a>
@@ -389,60 +373,17 @@ export const DataSources = () => {
             <div className="ds-anomaly-body">
               <div className="ds-anomaly-summary">
                 <div className="ds-anomaly-count">
-                  <span className="ds-anomaly-count-value">23</span>
+                  <span className="ds-anomaly-count-value">0</span>
                   <span className="ds-anomaly-count-label">Total Anomalies Detected</span>
                 </div>
-                <div className="ds-donut-container">
-                  {/* SVG Donut Chart */}
-                  <svg className="ds-donut-chart" viewBox="0 0 36 36">
-                    {/* High severity: 34.8% = 34.8 stroke */}
-                    <circle
-                      cx="18" cy="18" r="14"
-                      fill="none"
-                      stroke="#EF4444"
-                      strokeWidth="5"
-                      strokeDasharray="34.8 65.2"
-                      strokeDashoffset="25"
-                    />
-                    {/* Medium severity: 39.1% */}
-                    <circle
-                      cx="18" cy="18" r="14"
-                      fill="none"
-                      stroke="#F59E0B"
-                      strokeWidth="5"
-                      strokeDasharray="39.1 60.9"
-                      strokeDashoffset={25 - 34.8}
-                    />
-                    {/* Low severity: 26.1% */}
-                    <circle
-                      cx="18" cy="18" r="14"
-                      fill="none"
-                      stroke="#10B981"
-                      strokeWidth="5"
-                      strokeDasharray="26.1 73.9"
-                      strokeDashoffset={25 - 34.8 - 39.1}
-                    />
-                  </svg>
-                  <div className="ds-donut-legend">
-                    <div className="ds-donut-legend-item">
-                      <span className="ds-legend-dot" style={{ background: '#EF4444' }}></span>
-                      High Severity&nbsp;&nbsp;<strong>8</strong>&nbsp;(34.8%)
-                    </div>
-                    <div className="ds-donut-legend-item">
-                      <span className="ds-legend-dot" style={{ background: '#F59E0B' }}></span>
-                      Medium Severity&nbsp;&nbsp;<strong>9</strong>&nbsp;(39.1%)
-                    </div>
-                    <div className="ds-donut-legend-item">
-                      <span className="ds-legend-dot" style={{ background: '#10B981' }}></span>
-                      Low Severity&nbsp;&nbsp;<strong>6</strong>&nbsp;(26.1%)
-                    </div>
-                  </div>
+                <div className="ds-donut-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                  <span style={{ color: 'var(--color-text-muted)' }}>No data to display</span>
                 </div>
               </div>
 
               <div className="ds-recent-anomalies">
                 <h4>Recent Anomalies</h4>
-                {anomalies.map((a, i) => (
+                {anomalies.length > 0 ? anomalies.map((a, i) => (
                   <div className="ds-anomaly-item" key={i}>
                     <span className={`ds-anomaly-dot ${a.severity}`}></span>
                     <div className="ds-anomaly-item-info">
@@ -456,7 +397,11 @@ export const DataSources = () => {
                       </span>
                     </div>
                   </div>
-                ))}
+                )) : (
+                  <div style={{ padding: '2rem', textAlign: 'center', color: 'var(--color-text-muted)' }}>
+                    No recent anomalies found.
+                  </div>
+                )}
               </div>
             </div>
             <div className="ds-anomaly-footer">

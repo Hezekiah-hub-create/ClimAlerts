@@ -442,7 +442,7 @@
 }
 
 .toggle-switch input:checked + .slider {
-  background-color: var(--color-primary);
+  background-color: #16A34A;
 }
 
 .toggle-switch input:checked + .slider:before {

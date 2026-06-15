@@ -12,62 +12,22 @@ import {
 } from 'recharts';
 import './Reports.css';
 import { CustomDropdown } from '../../components/common/CustomDropdown';
+import { fmtDateTime, hoursAgo, daysAgo, dateRange, lastNDayLabels } from '../../utils/dateUtils';
 
 // ---------- Mock Data ----------
 
-const correlationData = [
-  { day: 'Apr 23', rainfall: 45, cases: 35 },
-  { day: 'Apr 28', rainfall: 85, cases: 42 },
-  { day: 'May 3', rainfall: 120, cases: 65 },
-  { day: 'May 8', rainfall: 95, cases: 55 },
-  { day: 'May 13', rainfall: 190, cases: 98 },
-  { day: 'May 18', rainfall: 140, cases: 88 },
-  { day: 'May 23', rainfall: 165, cases: 110 },
-];
+const _rLabels = lastNDayLabels(7);
+const correlationData = [];
 
-const outbreakTrendsData = [
-  { month: 'Dec \'24', cases: 80, alerts: 120 },
-  { month: 'Jan \'25', cases: 240, alerts: 320 },
-  { month: 'Feb \'25', cases: 190, alerts: 260 },
-  { month: 'Mar \'25', cases: 280, alerts: 410 },
-  { month: 'Apr \'25', cases: 420, alerts: 580 },
-  { month: 'May \'25', cases: 310, alerts: 440 },
-];
+const outbreakTrendsData = [];
 
-const accuracyOverTimeData = [
-  { month: 'Dec \'24', accuracy: 68 },
-  { month: 'Jan \'25', accuracy: 74 },
-  { month: 'Feb \'25', accuracy: 78 },
-  { month: 'Mar \'25', accuracy: 83 },
-  { month: 'Apr \'25', accuracy: 85 },
-  { month: 'May \'25', accuracy: 87.4 },
-];
+const accuracyOverTimeData = [];
 
-const regionalRisk = [
-  { region: 'Volta Region', score: 92.3, color: '#EF4444' },
-  { region: 'Ashanti Region', score: 78.6, color: '#F97316' },
-  { region: 'Northern Region', score: 65.4, color: '#F59E0B' },
-  { region: 'Greater Accra', score: 45.2, color: '#10B981' },
-  { region: 'Western Region', score: 32.8, color: '#10B981' },
-];
+const regionalRisk = [];
 
-const reportsList = [
-  { name: 'Malaria Outbreak Summary - Volta Region', type: 'PDF', user: 'Admin User', date: 'May 23, 2025 10:30 AM', status: 'Completed' },
-  { name: 'Monthly Climate & Health Report - April 2025', type: 'PDF', user: 'Admin User', date: 'May 1, 2025 08:15 AM', status: 'Completed' },
-  { name: 'Regional Risk Comparison Report', type: 'CSV', user: 'Admin User', date: 'Apr 30, 2025 05:45 PM', status: 'Completed' },
-  { name: 'Prediction Performance Report', type: 'PDF', user: 'Admin User', date: 'Apr 28, 2025 11:20 AM', status: 'Completed' },
-  { name: 'Alert Response Summary - April 2025', type: 'CSV', user: 'Admin User', date: 'Apr 27, 2025 04:10 PM', status: 'Completed' },
-  { name: 'SMS Delivery Report - April 2025', type: 'PDF', user: 'Admin User', date: 'Apr 25, 2025 02:35 PM', status: 'Completed' },
-  { name: 'Environmental Factors Analysis', type: 'PDF', user: 'Admin User', date: 'Apr 23, 2025 09:00 AM', status: 'Completed' },
-];
+const reportsList = [];
 
-const contributingFactors = [
-  { name: 'High Rainfall', pct: 82 },
-  { name: 'High Humidity', pct: 76 },
-  { name: 'Warm Temperature', pct: 61 },
-  { name: 'Stagnant Water Index', pct: 55 },
-  { name: 'Population Density', pct: 38 },
-];
+const contributingFactors = [];
 
 export const Reports = () => {
   const [selectedDisease, setSelectedDisease] = useState('Malaria');
@@ -99,7 +59,7 @@ export const Reports = () => {
             <span className="filter-label">Date Range</span>
             <div className="filter-selector-box">
               <Calendar size={14} className="filter-icon" />
-              <span>Apr 23 - May 23, 2025</span>
+              <span>{dateRange(30)}</span>
             </div>
           </div>
 
@@ -177,9 +137,9 @@ export const Reports = () => {
           </div>
           <div className="rep-metric-details">
             <span className="rep-metric-label">Total Reports Generated</span>
-            <span className="rep-metric-value">24</span>
-            <span className="rep-metric-trend positive">
-              <TrendingUp size={12} /> 20% vs last 30 days
+            <span className="rep-metric-value">0</span>
+            <span className="rep-metric-trend neutral">
+              —
             </span>
           </div>
         </div>
@@ -190,9 +150,9 @@ export const Reports = () => {
           </div>
           <div className="rep-metric-details">
             <span className="rep-metric-label">Alerts Sent</span>
-            <span className="rep-metric-value">982</span>
-            <span className="rep-metric-trend positive">
-              <TrendingUp size={12} /> 22% vs last 30 days
+            <span className="rep-metric-value">0</span>
+            <span className="rep-metric-trend neutral">
+              —
             </span>
           </div>
         </div>
@@ -203,9 +163,9 @@ export const Reports = () => {
           </div>
           <div className="rep-metric-details">
             <span className="rep-metric-label">Prediction Accuracy</span>
-            <span className="rep-metric-value">87.4%</span>
-            <span className="rep-metric-trend positive">
-              <TrendingUp size={12} /> 6.2% vs last 30 days
+            <span className="rep-metric-value">0%</span>
+            <span className="rep-metric-trend neutral">
+              —
             </span>
           </div>
         </div>
@@ -216,9 +176,9 @@ export const Reports = () => {
           </div>
           <div className="rep-metric-details">
             <span className="rep-metric-label">Active Regions Monitored</span>
-            <span className="rep-metric-value">16</span>
-            <span className="rep-metric-trend positive">
-              <TrendingUp size={12} /> 2 vs last 30 days
+            <span className="rep-metric-value">0</span>
+            <span className="rep-metric-trend neutral">
+              —
             </span>
           </div>
         </div>
@@ -281,25 +241,33 @@ export const Reports = () => {
             <h4>3. Regional Risk Comparison <Info size={16} className="info-trigger" /></h4>
           </div>
           <div className="report-chart-body progress-bars-body">
-            <div className="progress-bars-container">
-              {regionalRisk.map((item, idx) => (
-                <div className="region-risk-bar-row" key={idx}>
-                  <span className="region-name-lbl">{item.region}</span>
-                  <div className="risk-progress-track">
-                    <div 
-                      className="risk-progress-fill" 
-                      style={{ width: `${item.score}%`, backgroundColor: item.color }}
-                    ></div>
-                  </div>
-                  <span className="region-risk-score-val">{item.score}%</span>
+            {regionalRisk.length > 0 ? (
+              <>
+                <div className="progress-bars-container">
+                  {regionalRisk.map((item, idx) => (
+                    <div className="region-risk-bar-row" key={idx}>
+                      <span className="region-name-lbl">{item.region}</span>
+                      <div className="risk-progress-track">
+                        <div 
+                          className="risk-progress-fill" 
+                          style={{ width: `${item.score}%`, backgroundColor: item.color }}
+                        ></div>
+                      </div>
+                      <span className="region-risk-score-val">{item.score}%</span>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-            <div className="progress-axis-labels">
-              <span>0%</span>
-              <span>50%</span>
-              <span>100%</span>
-            </div>
+                <div className="progress-axis-labels">
+                  <span>0%</span>
+                  <span>50%</span>
+                  <span>100%</span>
+                </div>
+              </>
+            ) : (
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                <span style={{ color: 'var(--color-text-muted)', fontStyle: 'italic' }}>No regional data available</span>
+              </div>
+            )}
           </div>
         </div>
 
@@ -370,10 +338,6 @@ export const Reports = () => {
             <span className="pagination-info">Showing {filteredReports.length > 0 ? 1 : 0} to {filteredReports.length} of {reportsList.length} reports</span>
             <div className="pagination-controls">
               <button className="pag-btn" disabled><ChevronLeft size={16} /></button>
-              <button className="pag-btn active">1</button>
-              <button className="pag-btn">2</button>
-              <button className="pag-btn">3</button>
-              <button className="pag-btn">4</button>
               <button className="pag-btn"><ChevronRight size={16} /></button>
             </div>
           </div>
@@ -387,7 +351,7 @@ export const Reports = () => {
               <h3>Top Contributing Factors</h3>
             </div>
             <div className="factor-body">
-              {contributingFactors.map((factor, idx) => (
+              {contributingFactors.length > 0 ? contributingFactors.map((factor, idx) => (
                 <div className="factor-row" key={idx}>
                   <div className="factor-label-row">
                     <span className="factor-name">{factor.name}</span>
@@ -400,7 +364,11 @@ export const Reports = () => {
                     ></div>
                   </div>
                 </div>
-              ))}
+              )) : (
+                <div style={{ padding: '2rem', textAlign: 'center', color: 'var(--color-text-muted)' }}>
+                  No factors to display.
+                </div>
+              )}
             </div>
           </div>
 
@@ -410,18 +378,10 @@ export const Reports = () => {
               <h3><Sparkles size={16} className="insight-icon" /> AI Insight</h3>
               <a href="#" className="insight-details-link">View Details →</a>
             </div>
-            <div className="insight-body">
-              <h4 className="insight-title">High malaria outbreak risk detected in Volta Region.</h4>
-              <p className="insight-subtitle">Recommended actions:</p>
-              <ul className="insight-actions-list">
-                <li>✓ Increase distribution of mosquito nets</li>
-                <li>✓ Community awareness and sensitization</li>
-                <li>✓ Indoor residual spraying in high-risk districts</li>
-                <li>✓ Strengthen rapid diagnostic capacity</li>
-              </ul>
-              <div className="insight-footer">
-                <span className="insight-confidence-badge">Confidence: 87%</span>
-              </div>
+            <div className="insight-body" style={{ display: 'flex', flexDirection: 'column', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.85rem', fontStyle: 'italic', padding: '2rem 0' }}>
+                No active insights available at this time.
+              </p>
             </div>
           </div>
         </div>

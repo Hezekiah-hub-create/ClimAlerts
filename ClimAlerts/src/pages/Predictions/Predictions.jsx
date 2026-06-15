@@ -9,41 +9,21 @@ import {
   CartesianGrid, Tooltip, Legend 
 } from 'recharts';
 import './Predictions.css';
+import { lastNDayLabels, dateRange, fmtDateShort, daysAgo } from '../../utils/dateUtils';
 
 // ---------- Mock Data ----------
 
-const trendData = [
-  { date: 'May 23', malaria: 72, dengue: 45, cholera: 25, heat: 60, resp: 35 },
-  { date: 'May 24', malaria: 75, dengue: 48, cholera: 24, heat: 64, resp: 36 },
-  { date: 'May 25', malaria: 78, dengue: 52, cholera: 26, heat: 68, resp: 38 },
-  { date: 'May 26', malaria: 82, dengue: 55, cholera: 28, heat: 75, resp: 40 },
-  { date: 'May 27', malaria: 85, dengue: 58, cholera: 27, heat: 80, resp: 42 },
-  { date: 'May 28', malaria: 89, dengue: 62, cholera: 30, heat: 85, resp: 45 },
-  { date: 'May 29', malaria: 92.3, dengue: 65, cholera: 32, heat: 89.1, resp: 47 },
-  { date: 'May 30', malaria: 91, dengue: 68, cholera: 35, heat: 87, resp: 50 },
-  { date: 'May 31', malaria: 88, dengue: 72, cholera: 38, heat: 82, resp: 52 },
-  { date: 'Jun 1', malaria: 85, dengue: 78.6, cholera: 42, heat: 78, resp: 55 },
-  { date: 'Jun 2', malaria: 82, dengue: 76, cholera: 45, heat: 74, resp: 58 },
-  { date: 'Jun 3', malaria: 79, dengue: 73, cholera: 52, heat: 70, resp: 62 },
-  { date: 'Jun 4', malaria: 76, dengue: 70, cholera: 58, heat: 65, resp: 66 },
-  { date: 'Jun 5', malaria: 73, dengue: 68, cholera: 65.4, heat: 60, resp: 70 },
-  { date: 'Jun 6', malaria: 70, dengue: 65, cholera: 62, heat: 55, resp: 72.8 },
-];
+const _pLabels = lastNDayLabels(15);
+const trendData = [];
 
-const diseaseForecasts = [
-  { disease: 'Malaria', region: 'Volta Region', risk: 'High', score: 92.3, date: 'May 28 - Jun 4, 2025', trend: 'up', color: '#EF4444' },
-  { disease: 'Dengue Fever', region: 'Greater Accra', risk: 'Moderate', score: 78.6, date: 'Jun 1 - Jun 8, 2025', trend: 'up', color: '#F97316' },
-  { disease: 'Cholera', region: 'Central Region', risk: 'Low', score: 65.4, date: 'Jun 5 - Jun 12, 2025', trend: 'stable', color: '#10B981' },
-  { disease: 'Heat Exhaustion', region: 'Northern Region', risk: 'High', score: 89.1, date: 'May 26 - Jun 2, 2025', trend: 'up', color: '#EF4444' },
-  { disease: 'Respiratory Infections', region: 'Ashanti Region', risk: 'Moderate', score: 72.8, date: 'May 30 - Jun 6, 2025', trend: 'stable', color: '#F97316' },
-];
+const diseaseForecasts = [];
 
 const timelineEvents = [
-  { day: 'May 23', label: 'Today' },
-  { day: 'May 28', label: '5 Days' },
-  { day: 'Jun 2', label: '10 Days' },
-  { day: 'Jun 7', label: '15 Days' },
-  { day: 'Jun 12', label: '20 Days' },
+  { day: fmtDateShort(new Date()), label: 'Today' },
+  { day: fmtDateShort(daysAgo(-5)), label: '5 Days' },
+  { day: fmtDateShort(daysAgo(-10)), label: '10 Days' },
+  { day: fmtDateShort(daysAgo(-15)), label: '15 Days' },
+  { day: fmtDateShort(daysAgo(-20)), label: '20 Days' },
 ];
 
 export const Predictions = () => {
@@ -76,8 +56,8 @@ export const Predictions = () => {
           <div className="pred-metric-body">
             <span className="pred-metric-label">Active Predictions</span>
             <div className="pred-metric-row">
-              <span className="pred-metric-value">8</span>
-              <span className="pred-metric-trend positive">↑ 14.3% vs last 7 days</span>
+              <span className="pred-metric-value">0</span>
+              <span className="pred-metric-trend neutral">—</span>
             </div>
           </div>
         </div>
@@ -89,8 +69,8 @@ export const Predictions = () => {
           <div className="pred-metric-body">
             <span className="pred-metric-label">High Risk Predictions</span>
             <div className="pred-metric-row">
-              <span className="pred-metric-value">3</span>
-              <span className="pred-metric-trend negative">↑ 2 vs last 7 days</span>
+              <span className="pred-metric-value">0</span>
+              <span className="pred-metric-trend neutral">—</span>
             </div>
           </div>
         </div>
@@ -102,8 +82,8 @@ export const Predictions = () => {
           <div className="pred-metric-body">
             <span className="pred-metric-label">Avg. Confidence Score</span>
             <div className="pred-metric-row">
-              <span className="pred-metric-value">87.4%</span>
-              <span className="pred-metric-trend positive">↑ 6.2% vs last 7 days</span>
+              <span className="pred-metric-value">0%</span>
+              <span className="pred-metric-trend neutral">—</span>
             </div>
           </div>
         </div>
@@ -115,8 +95,8 @@ export const Predictions = () => {
           <div className="pred-metric-body">
             <span className="pred-metric-label">Total Forecasts</span>
             <div className="pred-metric-row">
-              <span className="pred-metric-value">156</span>
-              <span className="pred-metric-trend positive">↑ 18.7% vs last 7 days</span>
+              <span className="pred-metric-value">0</span>
+              <span className="pred-metric-trend neutral">—</span>
             </div>
           </div>
         </div>
@@ -128,8 +108,8 @@ export const Predictions = () => {
           <div className="pred-metric-body">
             <span className="pred-metric-label">Model Accuracy</span>
             <div className="pred-metric-row">
-              <span className="pred-metric-value">91.2%</span>
-              <span className="pred-metric-trend positive">↑ 7.1% vs last 30 days</span>
+              <span className="pred-metric-value">0%</span>
+              <span className="pred-metric-trend neutral">—</span>
             </div>
           </div>
         </div>
@@ -262,65 +242,13 @@ export const Predictions = () => {
           <div className="pred-explanation-card card">
             <div className="pred-card-header explanation-header">
               <div className="header-labels">
-                <h3>Malaria Forecast - Volta Region</h3>
-                <span className="badge-danger-outline">High Risk Prediction</span>
+                <h3>Forecast Explanation</h3>
               </div>
-              <a href="#" className="explanation-tech-details">View Technical Details →</a>
             </div>
-            <div className="pred-explanation-body">
-              <h4 className="body-heading">Key Contributing Factors:</h4>
-              <div className="factors-list">
-                <div className="factor-item-row">
-                  <div className="factor-icon-wrap rain">
-                    <CloudRain size={16} />
-                  </div>
-                  <div className="factor-content">
-                    <span className="factor-title">High rainfall expected in the next 7 days</span>
-                    <span className="factor-subtitle">+35% above normal</span>
-                  </div>
-                </div>
-
-                <div className="factor-item-row">
-                  <div className="factor-icon-wrap humidity">
-                    <Droplets size={16} />
-                  </div>
-                  <div className="factor-content">
-                    <span className="factor-title">High humidity levels</span>
-                    <span className="factor-subtitle">82% average humidity</span>
-                  </div>
-                </div>
-
-                <div className="factor-item-row">
-                  <div className="factor-icon-wrap temp">
-                    <Thermometer size={16} />
-                  </div>
-                  <div className="factor-content">
-                    <span className="factor-title">Temperature conditions favorable</span>
-                    <span className="factor-subtitle">28.6°C average temperature</span>
-                  </div>
-                </div>
-
-                <div className="factor-item-row">
-                  <div className="factor-icon-wrap pattern">
-                    <Calendar size={16} />
-                  </div>
-                  <div className="factor-content">
-                    <span className="factor-title">Historical pattern similarity</span>
-                    <span className="factor-subtitle">Similar to outbreaks in 2023, 2022</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* AI Model Insight Box */}
-              <div className="ai-insight-box">
-                <div className="insight-title-row">
-                  <Sparkles size={16} className="spark-gold" />
-                  <h5>AI Model Insight</h5>
-                </div>
-                <p className="insight-text">
-                  Our AI model has identified optimal conditions for malaria vector breeding and transmission based on environmental and historical data patterns.
-                </p>
-              </div>
+            <div className="pred-explanation-body" style={{ display: 'flex', flexDirection: 'column', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+              <p style={{ color: 'var(--color-text-muted)', fontSize: '0.85rem', fontStyle: 'italic', padding: '2rem 0' }}>
+                Select a prediction from the table to view its explanation.
+              </p>
             </div>
           </div>
 
